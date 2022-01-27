@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>php &#8211; ovi.ro</title>
+	<atom:link href="/tag/php-2/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Tue, 04 Apr 2017 07:43:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Compare strings in PHP</title>
+		<link>/php/sadness/compare-strings-in-php/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Tue, 04 Apr 2017 07:43:30 +0000</pubDate>
+				<category><![CDATA[Sadness]]></category>
+		<category><![CDATA[madness]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[strings]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=569</guid>
+
+					<description><![CDATA[Just read a comment in the PHP documentation and had another PHP madness moment. It seems you have to be really, really careful when comparing strings that include numbers&#8230; &#160; Command \ PHP Version 7.0.0 &#8211; 7.1.3 5.4.4 &#8211; 5.6.30 &#8230; <a class="more" href="/php/sadness/compare-strings-in-php/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Just read a <a href="http://php.net/manual/en/language.operators.comparison.php#114682">comment</a> in the PHP documentation and had another PHP madness moment.</p>
+<p>It seems you have to be really, really careful when comparing strings that include numbers&#8230;</p>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="800">Command \ PHP Version</td>
+<td width="75">7.0.0 &#8211; 7.1.3</td>
+<td width="83">5.4.4 &#8211; 5.6.30</td>
+<td width="76">5.2.1 &#8211; 5.4.3</td>
+</tr>
+<tr>
+<td>var_dump(&#8216;123&#8217; == &#8216;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 123&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;1e3&#8217; == &#8216;1000&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;+74951112233&#8217; == &#8216;74951112233&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;00000020&#8217; == &#8216;0000000000000000020&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0X1D&#8217; == &#8217;29E0&#8242;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xafebac&#8217; == &#8216;11529132&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xafebac&#8217; == &#8216;0XAFEBAC&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xeb&#8217; == &#8216;+235e-0&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #ff0000;"><strong>FALSE</strong></span></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0.235&#8217; == &#8216;+.235&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0.2e-10&#8217; == &#8216;2.0E-11&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;61529519452809720693702583126814&#8217; == &#8216;61529519452809720000000000000000&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+</tbody>
+</table>
+<p>https://3v4l.org/rop5S</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>CheatSheet Sources</title>
+		<link>/cheatsheets/cheatsheet-sources/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Wed, 13 Feb 2013 16:13:53 +0000</pubDate>
+				<category><![CDATA[CheatSheets]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=296</guid>
+
+					<description><![CDATA[Great list of websites that have cool cheatsheet files in diferent formats on a lot of topics, here mostly PHP, HTML, javascript etc. &#8230; <a class="more" href="/cheatsheets/cheatsheet-sources/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>CheatSheets are pieces of paper that sum up some importat aspects of a topic.</p>
+<p>Searching for PHP, Javascript, jQuery, etc. cheatsheets on the internet I found some great resources out there</p>
+<ul>
+<li><a href="http://www.cheatography.com/davechild/cheat-sheets/" target="_blank" rel="noopener noreferrer">Cheatography.com</a> seems to be the biggest searchable cheatsheets, but also in pdf format, literally hundreds</li>
+<li><a title="AddedBytes" href="http://www.addedbytes.com/cheat-sheets/" target="_blank" rel="noopener noreferrer">AddedBytes.com</a> great summaries, some of them cost $2, but most are for free</li>
+<li><a title="Woorkup" href="http://woorkup.com/" target="_blank" rel="noopener noreferrer">Woorkup.com</a> they have a great <a href="http://woorkup.com/wp-content/uploads/2011/05/jQuery-1.6-Visual-Cheat-Sheet.pdf" target="_blank" rel="noopener noreferrer">jQuery cheatsheet</a>, <a href="http://woork.blogspot.com/2009/09/html-5-visual-cheat-sheet-by-woork.html" target="_blank" rel="noopener noreferrer">HTML5</a>.</li>
+<li><a title="blueshoes.org" href="http://www.blueshoes.org/en/developer/php_cheat_sheet" target="_blank" rel="noopener noreferrer">Blueshoes.org</a> have some handy PHP tables to clear up some common mistakes beginner programmers do</li>
+<li><a title="Emezeta.com" href="http://www.emezeta.com/articulos/emezeta-card-php-cheat-sheet" target="_blank" rel="noopener noreferrer">Emezeta.com</a> &#8211; has a hudge PHP cheatsheet, I printed it on A3 format and it is great</li>
+<li><a title="Serversidemagazine.com" href="http://www.serversidemagazine.com/cheat-sheets/PHP5/" target="_blank" rel="noopener noreferrer">Serversidemagazine.com</a> has a fast prowsable page for quick reference</li>
+<li><a title="Dreamincode.net" href="http://www.dreamincode.net/" target="_blank" rel="noopener noreferrer">Dreamincode.net</a> &#8211; search for cheatsheet and you&#8217;l find a great <a title="PHP Cheatsheet" href="http://www.dreamincode.net/downloads/ref_sheets/php_reference_sheet.pdf" target="_blank" rel="noopener noreferrer">PHP</a> cheatsheet, and others for <a title="C++" href="http://www.dreamincode.net/forums/topic/12694-c-quick-reference-sheet-cheat-sheet/" target="_blank" rel="noopener noreferrer">C++</a>, <a title="C#" href="http://www.dreamincode.net/forums/topic/34988-c%23-basics-quick-reference-cheat-sheet/" target="_blank" rel="noopener noreferrer">C#</a>, <a title="Ruby" href="http://www.dreamincode.net/forums/topic/255958-basics-of-ruby-cheatsheet/" target="_blank" rel="noopener noreferrer">Ruby</a>, <a title="VB.NET" href="http://www.dreamincode.net/forums/topic/31908-vbnet-basics-quick-reference-cheat-sheet/" target="_blank" rel="noopener noreferrer">VB.NET</a> and much more</li>
+<li><a title="duvet-dayz.com" href="http://duvet-dayz.com/firebug-cheatsheet/" target="_blank" rel="noopener noreferrer">Duvet-dayz.com</a> &#8211; has a good cheatsheets for <a title="Firebug" href="http://duvet-dayz.com/firebug-cheatsheet/" target="_blank" rel="noopener noreferrer">FireBug</a></li>
+<li><a title="begoodnotbad.com" href="http://begoodnotbad.com/" target="_blank" rel="noopener noreferrer">BegoodNotBad.com</a> has an interesting cheatsheet widget on <a title="Cheatsheet on AppleStore" href="http://www.apple.com/downloads/dashboard/developer/phpcheatsheet.html" target="_blank" rel="noopener noreferrer">AppleStore</a>, or directly there for <a title="Css Cheatsheet" href="http://begoodnotbad.com/article/css_cheat_sheet/" target="_blank" rel="noopener noreferrer">CSS</a>, <a title="PHP CheatSheet" href="http://begoodnotbad.com/article/php_cheat_sheet/" target="_blank" rel="noopener noreferrer">PHP</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Syntax</title>
+		<link>/php/syntax/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Tue, 10 Jan 2012 18:00:56 +0000</pubDate>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[PHP Basics]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[comments]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[syntax]]></category>
+		<category><![CDATA[tags]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=120</guid>
+
+					<description><![CDATA[Basic PHP syntax, all about closing tags abd php blocks, exceptions, best practice and some details about comments. &#8230; <a class="more" href="/php/syntax/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<h3><!--:en-->PHP tags</h3>
+<p>PHP code must be put between some special characters</p>
+<pre class="toolbar-overlay:true lang:php decode:true" title="PHP Basic Syntax">&lt;?php     ?&gt;
+&lt;?        ?&gt;    // with short_open_tag enabled or php with option --enable-short-tags
+&lt;script language="php"&gt; &lt;/script&gt;  // old style
+&lt;%        %&gt;    // ASP style asp_tags enabled</pre>
+<p>Other formats</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="Echo equivalents">&lt;?php echo 'message'; ?&gt;   // this are equivalents
+&lt;?= 'message'; ?&gt;     // if short_open_tag is enabled or PHP &gt; 5.4
+&lt;%= 'message'; ?&gt;   // if asp_tags is enabled</pre>
+<p>PHP blocks mixed with HTML code</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="PHP and HTML mixed">&lt;?php if ($expression == true): ?&gt;
+  Text if true &lt;img src="/image.jpg" /&gt;
+&lt;?php else: ?&gt;
+  HTML code for else &lt;a href="/branch.html"&gt;branch&lt;/a&gt;.
+&lt;?php endif; ?&gt;</pre>
+<p>Some exceptions</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="XML Exception">&lt;?php echo '&lt;?xml version="1.0" encoding="UTF-8" ?&gt;'; ?&gt;
+// xml files must start with this to be PHP compatible</pre>
+<pre class="toolbar-overlay:true lang:default decode:true">&lt;?php // not allowed as the only text in PHP 5.2 or less</pre>
+<p>Best practice</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="Best Practive">  ?&gt;  // don't use ending tags in php only files to prevent sending headers if you put a space after ?&gt;
+
+&lt;?= 'text'; ?&gt;  // not recomanded for redistributable code or changing environments</pre>
+<h3>Comments</h3>
+<p>Single line comments</p>
+<pre class="lang:default decode:true" title="Single line comments">&lt;?php // comment ?&gt;
+&lt;?php # comment ?&gt;
+
+&lt;?php // comment ends at the end of the line
+      //  or at ending tag ?&gt;   here is outside comment
+
+&lt;script language="php"&gt; //this comment doesn't end at script tag ending &lt;/scrip&gt;</pre>
+<p>Multiline comments</p>
+<pre class="lang:default decode:true" title="Multiline comment">&lt;?php /*  starts here
+          continues here
+          ends here     */   ?&gt;</pre>
+<p>Comments mistakes</p>
+<pre class="lang:default decode:true" title="Comment ends at first ?&gt;">&lt;?php
+       //echo '&lt;?php code ?&gt;'; ?&gt;</pre>
+<pre class="lang:default decode:true" title="First comment ends at the */ from the pattern">&lt;?php /*
+      $pattern = "/^\d.*/";
+      */</pre>
+<pre class="lang:default decode:true" title="Comment ends at first */">&lt;?php
+/*
+      echo 'Some text'; /* Can't imbricate multiline comments */
+*/</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

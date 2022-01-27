@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>bitwise &#8211; ovi.ro</title>
+	<atom:link href="/tag/bitwise/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Thu, 01 Nov 2012 18:01:11 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Operators list</title>
+		<link>/php/operators-list/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Thu, 01 Nov 2012 18:01:11 +0000</pubDate>
+				<category><![CDATA[Operators]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[PHP Basics]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[arithmetic]]></category>
+		<category><![CDATA[assignment]]></category>
+		<category><![CDATA[bitwise]]></category>
+		<category><![CDATA[operators]]></category>
+		<category><![CDATA[reference]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=185</guid>
+
+					<description><![CDATA[PHP operators: arithmetic, assignment, reference, bitwise. &#8230; <a class="more" href="/php/operators-list/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<h3>Arithmetic Operators</h3>
+<table class="with-borders">
+<thead>
+<tr>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&#8211;</strong>$a</td>
+<td>Negation</td>
+<td>Opposite of <strong><var>$a</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>+</strong> $b</td>
+<td>Addition</td>
+<td>Sum of <strong><var>$a</var></strong> and<strong> <var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>&#8211;</strong> $b</td>
+<td>Subtraction</td>
+<td>Difference of <strong><var>$a</var></strong> and <strong><var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>*</strong> $b</td>
+<td>Multiplication</td>
+<td>Product of <strong><var>$a</var></strong> and <strong><var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>/</strong> $b</td>
+<td>Division</td>
+<td>Quotient of<strong> <var>$a</var></strong> and <strong><var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>%</strong> $b</td>
+<td>Modulus</td>
+<td>Remainder of <strong><var>$a</var></strong> divided by <strong><var>$b</var></strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3>Assignment Operators</h3>
+<pre class="lang:default decode:true">&lt;?php $a = 5; ?&gt;
+
+&lt;?php $a = ($b = 2) + 5;  // $a = 7 ?&gt;
+
+&lt;?php
+  $a = 2;
+  $a += 3; // sets $a to 5, equivalent to: $a = $a + 5;
+  $b = "Hello ";
+  $b .= "World!"; // sets $b to "Hello There!", equivalent to  $b = $b . "There!";  ( dot is for contatenation)
+?&gt;</pre>
+<h3> Assignment by Reference</h3>
+<pre class="lang:default decode:true">&lt;?php
+  $a = 3;
+  $b = &amp;$a; // $b is a reference to $a - changes of $a will apply to $b too
+  echo $a . $b;   // prints 33
+
+  $a = 4;
+  echo $a . $b;   // prints 44
+
+  class C {}
+
+  $o = &amp;new C;  // as of PHP 5 classes are passed by default by reference
+              // as of PHP 5.3 this will throw an E_DEPRECATED error
+?&gt;</pre>
+<h3> Bitwise Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>$a &amp; $b</code></strong></td>
+<td>And</td>
+<td>100<strong>1</strong> &amp; 010<strong>1</strong>  = 0001</td>
+</tr>
+<tr>
+<td><strong><code>$a | $b</code></strong></td>
+<td>Or (inclusive or)</td>
+<td><strong>1</strong>00<strong>1</strong> | 0<strong>1</strong>0<strong>1</strong> = 1101</td>
+</tr>
+<tr>
+<td><strong><code>$a ^ $b</code></strong></td>
+<td>Xor (exclusive or)</td>
+<td><strong>10</strong>01 ^ <strong>01</strong>01  = 0100</td>
+</tr>
+<tr>
+<td><strong><code>~ $a</code></strong></td>
+<td>Not</td>
+<td><b>~ 1</b>00<b>1 = 0110</b></td>
+</tr>
+<tr>
+<td><strong><code>$a &lt;&lt; $b</code></strong></td>
+<td>Shift left</td>
+<td>0010 &lt;&lt; 1 = 0100</td>
+</tr>
+<tr>
+<td><strong><code>$a &gt;&gt; $b</code></strong></td>
+<td>Shift right</td>
+<td>Shift the bits of <var>$a</var> <var>$b</var> steps to the right (each step means &#8220;divide by two&#8221;)</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

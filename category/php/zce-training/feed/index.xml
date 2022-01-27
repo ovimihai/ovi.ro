@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ZCE Training &#8211; ovi.ro</title>
+	<atom:link href="/category/php/zce-training/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Thu, 25 Feb 2016 13:54:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>PHP switch case after default works normally</title>
+		<link>/php/zce-training/php-basics/php-switch-case-after-default-works-normally/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Thu, 25 Feb 2016 13:54:32 +0000</pubDate>
+				<category><![CDATA[PHP Basics]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=485</guid>
+
+					<description><![CDATA[When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases. The documentation doesn&#8217;t specify this directly, but there is a note with an example. &#8230; <a class="more" href="/php/zce-training/php-basics/php-switch-case-after-default-works-normally/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases.<br />
+The documentation doesn&#8217;t specify this directly, but there is a note with an example.<br />
+Another thing worth mentioning is that switch does loose comparisons, so be careful about 0, false values</p>
+<pre class="lang:php decode:true">$a = 3;
+switch ($a) {
+    case 1: echo 'one'; break;
+    case 2: echo 'two'; break;
+    default: echo 'four'; break;
+    case 3: echo 'three'; break;
+}
+// outputs 'three'
+</pre>
+<p><a href="http://ideone.com/DQGUvU" target="_blank" rel="noopener noreferrer">Test yourself on iodine.com</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How Tor works</title>
+		<link>/php/zce-training/security/how-tor-works/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2015 15:12:26 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=475</guid>
+
+					<description><![CDATA[Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS. The photo is provided by the EFF https://www.eff.org/pages/tor-and-https]]></description>
+										<content:encoded><![CDATA[<p>Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS.<br />
+The photo is provided by the EFF <a href="https://www.eff.org/pages/tor-and-https" target="_blank" rel="noopener noreferrer">https://www.eff.org/pages/tor-and-https</a></p>
+<p><img src="https://www.eff.org/files/tor-https-3.png" alt="" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Regex</title>
+		<link>/php/zce-training/strings-patterns/regex/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2015 09:19:27 +0000</pubDate>
+				<category><![CDATA[Strings & Patterns]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=421</guid>
+
+					<description><![CDATA[Documentation Cheatsheet: Dave Child, Dzone, RegexOne Tools: (Online) RegExr, Regex101, RagexPal, RegexPlanet, (Offline) Rad Software (free) or RegexBuddy (paid)]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.regular-expressions.info/" target="new" rel="noopener noreferrer">Documentation</a><br />
+Cheatsheet: <a href="http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/" target="new" rel="noopener noreferrer">Dave Child</a>, <a href="http://refcardz.dzone.com/refcardz/regular-expressions">Dzone</a>, <a href="http://regexone.com/cheatsheet" target="new" rel="noopener noreferrer">RegexOne</a><br />
+Tools: (Online) <a href="http://www.regexr.com/" target="new" rel="noopener noreferrer">RegExr</a>, <a href="https://regex101.com/" target="new" rel="noopener noreferrer">Regex101</a>, <a href="http://regexpal.com/" target="new" rel="noopener noreferrer">RagexPal</a>, <a href="http://www.regexplanet.com/advanced/java/index.html" target="new" rel="noopener noreferrer">RegexPlanet</a>, <br />(Offline) <a href="http://rad-software-regular-expression-designer.software.informer.com/" target="new" rel="noopener noreferrer">Rad Software</a> (free) or <a href="http://www.regexbuddy.com/" target="new" rel="noopener noreferrer">RegexBuddy</a> (paid)</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Zend Certified PHP Engineer Exam</title>
+		<link>/php/zce-training/zend-certified-php-engineer-exam/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2015 08:39:09 +0000</pubDate>
+				<category><![CDATA[ZCE Training]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=403</guid>
+
+					<description><![CDATA[In a competitive environment as the programming world is this kind of certification can help you differentiate yourself when you are looking for a job. You might want a bigger salary, you want to improve your CV, the certification is &#8230; <a class="more" href="/php/zce-training/zend-certified-php-engineer-exam/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>In a competitive environment as the programming world is this kind of certification can help you differentiate yourself when you are looking for a job. You might want a bigger salary, you want to improve your CV, the certification is clearly a big advantage.<br />
+Taking the exam will not only help you gain some recognition at work or at interviews, but you will revise your php knowledge and fill the gaps you might have.<br />
+If you take the exam you will get a place in the <a href="http://www.zend.com/store/education/certification/yellow-pages.php" target="new" rel="noopener noreferrer">Zend yellow pages</a>, be accepted in their exclusive <a href="https://www.linkedin.com/groups?home=&#038;gid=42193&#038;trk=anet_ug_hm" target="new" rel="noopener noreferrer">LinkedIn group</a> and get a free copy of <a href="http://www.zend.com/en/products/studio" target="new" rel="noopener noreferrer">Zend Studio</a>.</p>
+<p>The exam is composed of 70 random questions that vary in their level of difficulty. The questions are now based on PHP 5.5 version and will test one or more concept at a time. You are allowed 90 minutes to answer the questions that will cover the following 10 topic areas:</p>
+<ol>
+<li><strong><span style="color: #ff0000;">Php basics</span></strong></li>
+<li>Data formats and types</li>
+<li><span style="color: #ff6600;">Strings</span></li>
+<li><span style="color: #ff6600;">Arrays</span></li>
+<li>Input / Output</li>
+<li><span style="color: #ff6600;">Functions</span></li>
+<li><strong><span style="color: #ff0000;">Object-Oriented Programming</span></strong></li>
+<li>Databases</li>
+<li><strong><span style="color: #ff0000;">Security</span></strong></li>
+<li><span style="color: #ff6600;">Web features</span></li>
+</ol>
+<p>I highlighted with <span style="color: #ff0000;"><strong>red</strong> </span>the most important topics and with <span style="color: #ff6600;">orange</span> the second most important topics. You will have to know all of this areas, being an expert in only a few area will not be enough.</p>
+<p>You can buy the exam voucher in the <a href="http://www.zend.com/en/services/certification/php-5-certification" target="new" rel="noopener noreferrer">Zend Shop</a> and schedule your exam in the <a href="http://www.pearsonvue.com/zend/" target="new" rel="noopener noreferrer">Pearson VUE</a> training centers. You should have an test center near you or in a bigger city near you. They ask you for tow forms of identification and they ask to have signature and picture on them (id card, drivers license, credit card should work). In the testing room they provide you some way for you to make any calculations you need (scratch paper or erasable board) and you are not allowed with any device or paper.</p>
+<p>There are 3 types of questions: multiple choice with only one right question (most frequent), multiple choice with two or more answers(they say how many) and a free text with simple word/words (no comments, white spaces, explanations allowed). They don&#8217;t penalty you for guessing, but you&#8217;d better mark for review if you are not sure and then get later back on them.</p>
+<p>The emphasis is more on analysis, not memorization, but you have to know commonly used elements: common functions, constants, classes, maybe the function arguments order (needle, haystack, etc)</p>
+<p>The questions refer to a environment with the recommended PHP configuration, with error_reporting set to E_ALL and display_errors on (unless the questions specifies otherwise). The environment is independent of the operating system and database adapters, you still have to know basic SQL or HTTP.</p>
+<p>After the exam you get immediately the pass/fail status and they give you a sheet with feedback on each topic you need to study more just if you fail.</p>
+<p>You have a lot of online resources, but first on the list is always the <a href="http://php.net/" target="new" rel="noopener noreferrer">PHP Manual</a>!</p>
+<p>Check out this list of topics from <a href="https://bitly.com/bundles/lornajane/3" target="new" rel="noopener noreferrer">Lorna Mitchel</a> and if you want to invest in your training, the <a href="http://www.ucertify.com/?func=load_course&amp;course=200-550" target="new" rel="noopener noreferrer">uCertify 200-550 training</a> is great!<br />
+I have <a href="http://0v1.ro/php/zce/">another article</a> with the full topics and some articles about each other<br />
+Other unrated sources: <a href="http://www.slideshare.net/luckysher007/php-5-3studyguidev1a" target="new" rel="noopener noreferrer">Study guide</a>, <a href="http://www.slideshare.net/lornajane/zend-certification-preparation-tutorial" target="new" rel="noopener noreferrer">Lorna Mitchell presentation</a><br />
+Good luck!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Variables</title>
+		<link>/php/variables/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Sun, 03 Feb 2013 20:42:41 +0000</pubDate>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[PHP Basics]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[$this]]></category>
+		<category><![CDATA[context]]></category>
+		<category><![CDATA[global]]></category>
+		<category><![CDATA[scope]]></category>
+		<category><![CDATA[superglobal]]></category>
+		<category><![CDATA[variable variables]]></category>
+		<category><![CDATA[variables]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=280</guid>
+
+					<description><![CDATA[Variables are preceded in PHP by a dollar sign $ and the rules for naming are: [a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here &#8230; <a class="more" href="/php/variables/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Variables are preceded in PHP by a dollar sign $ and the rules for naming are: <strong><em>[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*</em></strong><em>   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here can include extended <a title="ASCII TABLE" href="http://www.ascii-code.com/" target="_blank" rel="noopener noreferrer">ascii</a> characters from 7F to FF (127 &#8211; 255) so don&#8217;t blame me if you find letters like ç, † or ½</em></p>
+<p>When declaring a variable, in PHP you don&#8217;t need to specify a type, it&#8217;s enough to give it a name and assign it a value. $var = &#8220;string value&#8221;;</p>
+<p>Variables are <strong>case sensitive</strong> and some variable names are reserved: <strong>$this </strong>( used inside objects)<strong>, $_SERVER, $GLOBALS, $_SESSION, $_COOKIE, $_POST, $_GET, $_REQUEST, $_ENV </strong>(global variables).</p>
+<p>When variables are not assigned values they behave as in the table above, but an E_NOTICE error is issued, and it is not recomanded to not properly initialize them or check if they are set with <strong>isset() </strong>function.</p>
+<table class="with-borders">
+<tbody>
+<tr>
+<th>Situation</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>
+<pre class="lang:default decode:true">var_dump($unset_var);</pre>
+</td>
+<td> <strong>NULL</strong></td>
+</tr>
+<tr>
+<td>
+<pre class="lang:default decode:true  crayon-selected">echo($unset_bool ? "true\n" : "false\n");</pre>
+</td>
+<td> <strong>false</strong></td>
+</tr>
+<tr>
+<td>
+<pre class="lang:default decode:true">$unset_str .= 'abc';
+var_dump($unset_str);</pre>
+</td>
+<td><strong> abc</strong>   ( &#8221; concatenated with &#8216;abc&#8217; )</td>
+</tr>
+<tr>
+<td>
+<pre class="lang:default decode:true crayon-selected">$unset_int += 25;
+var_dump($unset_int);</pre>
+</td>
+<td> <strong>25</strong>  ( 0+25 )</td>
+</tr>
+<tr>
+<td>
+<pre class="lang:default decode:true">$unset_float += 1.25;
+var_dump($unset_float);</pre>
+</td>
+<td><strong> 1.25</strong>  ( 0+ 1.25)</td>
+</tr>
+<tr>
+<td>
+<pre class="lang:default decode:true">$unset_arr[3] = "def";
+var_dump($unset_arr);</pre>
+</td>
+<td> <strong>array(1) {  [3]=&gt;  string(3) &#8220;def&#8221; }</strong><br />
+adds empty array() with array with element key: 3, value &#8220;def&#8221;</td>
+</tr>
+<tr>
+<td>
+<pre class="lang:default decode:true">$unset_obj-&gt;foo = 'bar';
+var_dump($unset_obj);</pre>
+</td>
+<td><strong> object(stdClass)#1 (1) {  [&#8220;foo&#8221;]=&gt;  string(3) &#8220;bar&#8221; }</strong><br />
+initializes an stdClass() object and assigns parameter foo the value &#8216;bar&#8217;</td>
+</tr>
+</tbody>
+</table>
+<h3>Variable variables</h3>
+<p>In PHP you even can have dynamic names for variables! You can create a variable using another variable value as it&#8217;s name</p>
+<pre class="lang:default decode:true">$varName = 'newvar';
+$$varName = 'abc';
+
+echo $newvar;</pre>
+<p>Variable variables can be defined as above or if you want to use an array key as name, you have to use curly brackets to avoid the ambiguity</p>
+<pre class="lang:default decode:true">$a = array('hello', 'world');
+${$a[1]} = 'value';
+
+echo $world;</pre>
+<p>It works with object properties too</p>
+<pre class="lang:default decode:true">$var = 'property';
+$obj-&gt;$var;
+
+// or even
+$obj-&gt;{$start . $stop};</pre>
+<p>If this is not too much already, try looking at the <a title="Example #1 - Variable variables - PHP Manual" href="http://php.net/manual/en/language.variables.variable.php" target="_blank" rel="noopener noreferrer">Example #1 in the PHP manual</a></p>
+<h3>Variable scope</h3>
+<p>Variable scope refers to the availability of variables in different contexts.</p>
+<pre class="lang:default decode:true">$globalVar = 1;
+
+function abc(){
+  $localVar = 2;
+  $globalVar = 2; // this is still local, and it doesn't affect the variable outside the function
+}
+abc();
+echo $globalVar; // echoes 1 !</pre>
+<p>Inside functions you can access global variables using the keyword <strong>global</strong></p>
+<pre class="lang:default decode:true">$var = 1;
+
+function do_something(){
+  global $var;
+  $var = 2;
+}
+do_something();
+
+echo $var; // echoes 2</pre>
+<p>Global variables can be accessed using special PHP predefined variable <strong>$GLOBALS</strong></p>
+<pre class="lang:default decode:true">$var = 2;
+
+function do_something(){
+  $GLOBAL['var'] = 3;
+}
+do_something();
+
+echo $var; // echoes 3</pre>
+<p>Some of the predefined PHP variables are <strong>superglobals</strong> and can be accessed anywhere without the global keyword: $GLOBALS, $_SERVER, $_GET, $_POST, $_FILES, $_COOKIE, $_SESSION, $_REQUEST, $_ENV;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Operator Precedence</title>
+		<link>/php/zce-training/php-basics/operators/operator-precedence/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Sat, 15 Dec 2012 18:00:46 +0000</pubDate>
+				<category><![CDATA[Operators]]></category>
+		<category><![CDATA[operators]]></category>
+		<category><![CDATA[order]]></category>
+		<category><![CDATA[precedence]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=161</guid>
+
+					<description><![CDATA[PHP Operators precedence and exceptions &#8230; <a class="more" href="/php/zce-training/php-basics/operators/operator-precedence/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Like in math: 3 + 4 * 5 = 23 and not 35, in PHP you have an order for interpreting the code.</p>
+<table class="with-borders" width="780" border="0" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col width="248" /> </colgroup>
+<tbody>
+<tr>
+<th>Associativity</th>
+<th>Operators</th>
+<th width="248">Additional Information</th>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>clone new</td>
+<td width="248">clone<span> and </span><span>new</span></td>
+</tr>
+<tr>
+<td>left</td>
+<td>[</td>
+<td width="248"><a href="http://php.net/manual/ro/function.array.php">array()</a></td>
+</tr>
+<tr>
+<td>right</td>
+<td>++ &#8212; ~ (int) (float) (string) (array) (object) (bool) @</td>
+<td width="248">types<span> and </span><span>increment/decrement</span></td>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>instanceof</td>
+<td width="248"><a href="http://php.net/manual/ro/language.types.php">types</a></td>
+</tr>
+<tr>
+<td>right</td>
+<td>!</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>* / %</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.arithmetic.php">arithmetic</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>+ &#8211; .</td>
+<td width="248">arithmetic<span> ?i </span><span>string</span></td>
+</tr>
+<tr>
+<td>left</td>
+<td>&lt;&lt; &gt;&gt;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.bitwise.php">bitwise</a></td>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>&lt; &lt;= &gt; &gt;=</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.comparison.php">comparison</a></td>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>== != === !== &lt;&gt;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.comparison.php">comparison</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>&amp;</td>
+<td width="248">bitwise<span> ?i </span><span>references</span></td>
+</tr>
+<tr>
+<td>left</td>
+<td>^</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.bitwise.php">bitwise</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>|</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.bitwise.php">bitwise</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>&amp;&amp;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>||</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>? :</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.comparison.php#language.operators.comparison.ternary">ternary</a></td>
+</tr>
+<tr>
+<td>right</td>
+<td>= += -= *= /= .= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;= =&gt;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.assignment.php">assignment</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>and</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>xor</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>or</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>,</td>
+<td width="248">many uses</td>
+</tr>
+</tbody>
+</table>
+<p>For operators that have the same precedence, the order is specified in the first column.<br />
+PHP also knows about <strong>Asociativity</strong>.</p>
+<p>Exception:</p>
+<pre class="lang:default decode:true"> if (!$a = foo())</pre>
+<p>Even if<strong> = </strong>has lower precedence than other operators (<strong>!</strong> here) the return falue of <strong>foo()</strong> is put into <strong>$a</strong>  before the negation</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Operators list</title>
+		<link>/php/operators-list/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Thu, 01 Nov 2012 18:01:11 +0000</pubDate>
+				<category><![CDATA[Operators]]></category>
+		<category><![CDATA[PHP]]></category>
+		<category><![CDATA[PHP Basics]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[arithmetic]]></category>
+		<category><![CDATA[assignment]]></category>
+		<category><![CDATA[bitwise]]></category>
+		<category><![CDATA[operators]]></category>
+		<category><![CDATA[reference]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=185</guid>
+
+					<description><![CDATA[PHP operators: arithmetic, assignment, reference, bitwise. &#8230; <a class="more" href="/php/operators-list/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<h3>Arithmetic Operators</h3>
+<table class="with-borders">
+<thead>
+<tr>
+<th>Example</th>
+<th>Name</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&#8211;</strong>$a</td>
+<td>Negation</td>
+<td>Opposite of <strong><var>$a</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>+</strong> $b</td>
+<td>Addition</td>
+<td>Sum of <strong><var>$a</var></strong> and<strong> <var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>&#8211;</strong> $b</td>
+<td>Subtraction</td>
+<td>Difference of <strong><var>$a</var></strong> and <strong><var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>*</strong> $b</td>
+<td>Multiplication</td>
+<td>Product of <strong><var>$a</var></strong> and <strong><var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>/</strong> $b</td>
+<td>Division</td>
+<td>Quotient of<strong> <var>$a</var></strong> and <strong><var>$b</var></strong>.</td>
+</tr>
+<tr>
+<td>$a <strong>%</strong> $b</td>
+<td>Modulus</td>
+<td>Remainder of <strong><var>$a</var></strong> divided by <strong><var>$b</var></strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3>Assignment Operators</h3>
+<pre class="lang:default decode:true">&lt;?php $a = 5; ?&gt;
+
+&lt;?php $a = ($b = 2) + 5;  // $a = 7 ?&gt;
+
+&lt;?php
+  $a = 2;
+  $a += 3; // sets $a to 5, equivalent to: $a = $a + 5;
+  $b = "Hello ";
+  $b .= "World!"; // sets $b to "Hello There!", equivalent to  $b = $b . "There!";  ( dot is for contatenation)
+?&gt;</pre>
+<h3> Assignment by Reference</h3>
+<pre class="lang:default decode:true">&lt;?php
+  $a = 3;
+  $b = &amp;$a; // $b is a reference to $a - changes of $a will apply to $b too
+  echo $a . $b;   // prints 33
+
+  $a = 4;
+  echo $a . $b;   // prints 44
+
+  class C {}
+
+  $o = &amp;new C;  // as of PHP 5 classes are passed by default by reference
+              // as of PHP 5.3 this will throw an E_DEPRECATED error
+?&gt;</pre>
+<h3> Bitwise Operators</h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Name</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>$a &amp; $b</code></strong></td>
+<td>And</td>
+<td>100<strong>1</strong> &amp; 010<strong>1</strong>  = 0001</td>
+</tr>
+<tr>
+<td><strong><code>$a | $b</code></strong></td>
+<td>Or (inclusive or)</td>
+<td><strong>1</strong>00<strong>1</strong> | 0<strong>1</strong>0<strong>1</strong> = 1101</td>
+</tr>
+<tr>
+<td><strong><code>$a ^ $b</code></strong></td>
+<td>Xor (exclusive or)</td>
+<td><strong>10</strong>01 ^ <strong>01</strong>01  = 0100</td>
+</tr>
+<tr>
+<td><strong><code>~ $a</code></strong></td>
+<td>Not</td>
+<td><b>~ 1</b>00<b>1 = 0110</b></td>
+</tr>
+<tr>
+<td><strong><code>$a &lt;&lt; $b</code></strong></td>
+<td>Shift left</td>
+<td>0010 &lt;&lt; 1 = 0100</td>
+</tr>
+<tr>
+<td><strong><code>$a &gt;&gt; $b</code></strong></td>
+<td>Shift right</td>
+<td>Shift the bits of <var>$a</var> <var>$b</var> steps to the right (each step means &#8220;divide by two&#8221;)</td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>ZCE Exam</title>
+		<link>/php/zce/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Mon, 01 Oct 2012 18:00:41 +0000</pubDate>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[diploma]]></category>
+		<category><![CDATA[exam]]></category>
+		<category><![CDATA[topics]]></category>
+		<category><![CDATA[zce]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=203</guid>
+
+					<description><![CDATA[ZCE all usefull details about the exam and the topics summary you sould study &#8230; <a class="more" href="/php/zce/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Zend PHP 5.3 Certification Exam is a measure of technical distinction that employers use to evaluate prospective employees.</p>
+<p>The exam consists of <strong>70 questions</strong> that must be answered in <strong>90 minutes</strong> and it cover the categories listed below. The questions are <strong>multiple choice</strong> (one or many responses) or <strong>free-form</strong> <strong>fields</strong> to fill in.</p>
+<p>The exam can be taken in any <a href="http://www.pearsonvue.com/zend/">Pearson VUE Testing Center</a> if you purchase a <strong>1 year valid</strong> voucher from the <a title="Zend Online Store - ZCE" href="http://shop.zend.com/en/zf-certification/zend-framework-certification-voucher.html">Zend Online Store</a> and you must have there <strong>2 identification forms</strong> (must have signature).</p>
+<p>You pass the exam if you answer more than 70% of the questions, then you will be listed in  <a href="http://www.zend.com/store/education/certification/yellow-pages.php">Zend Yellow Pages for PHP Professionals</a>, you&#8217;ll get a <strong>diploma</strong> in few weeks and you might get a <a title="Zend Studio" href="http://www.zend.com/en/products/studio/">Zend Studio free License</a></p>
+<p>You can find more info hre: <a title="ZCE" href="http://www.zend.com/services/certification/php-5-certification/">http://www.zend.com/services/certification/php-5-certification/</a></p>
+<p>The exam topics summary:</p>
+<table width="100%" border="0">
+<tbody>
+<tr>
+<th width="33%"><a title="PHP Basics Category" href="http://0v1.ro/category/php/zce-training/php-basics/">PHP Basics</a></th>
+<th width="33%">Functions</th>
+<th width="34%">Data Format &amp; Types</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li><a title="Php basic syntax" href="http://0v1.ro/php/syntax/">Syntax</a></li>
+<li><a title="Php operators Category" href="http://0v1.ro/category/php/zce-training/php-basics/operators/">Operators</a></li>
+<li><a href="/php/variables/">Variables</a></li>
+<li>Constants</li>
+<li>Control Structures</li>
+<li>Language Constructs and Functions</li>
+<li>Namespaces</li>
+<li>Extensions</li>
+<li>Config</li>
+<li>Performance/bytecode caching</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Syntax</li>
+<li>Arguments</li>
+<li>Variables</li>
+<li>References</li>
+<li>Returns</li>
+<li>Variable Scope</li>
+<li>Anonymous Functions, closures</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>XML Basics</li>
+<li>SimpleXML</li>
+<li>XML Extension</li>
+<li>Xpath</li>
+<li>Webservices Basics</li>
+<li>SOAP</li>
+<li>REST</li>
+<li>JSON &amp; AJAX</li>
+<li>DateTime</li>
+<li>DOMDocument</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table summary="" width="100%" border="0" cellspacing="1" cellpadding="1" align="">
+<tbody>
+<tr>
+<th width="33%">Web Features</th>
+<th width="33%">Object Oriented Programming</th>
+<th width="34%">Security</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li>Sessions</li>
+<li>Forms</li>
+<li>GET and POST data</li>
+<li>Cookies</li>
+<li>HTTP Headers</li>
+<li>HTTP Authentication</li>
+</ul>
+<table>
+<tbody>
+<tr>
+<th>I/O</th>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Files</li>
+<li>Reading</li>
+<li>Writing</li>
+<li>File System Functions</li>
+<li>Streams</li>
+<li>Contexts</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Instantiation</li>
+<li>Modifiers/Inheritance</li>
+<li>Interfaces</li>
+<li>Exceptions</li>
+<li>Static Methods &amp; Properties</li>
+<li>Autoload</li>
+<li>Reflection</li>
+<li>Type Hinting</li>
+<li>Class Constants</li>
+<li>Late Static Binding</li>
+<li>Magic (_*) Methods</li>
+<li>Instance Methods &amp; Properties</li>
+<li>Class Definition</li>
+<li>SPL</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Configuration</li>
+<li>Session Security</li>
+<li>Cross-Site Scripting</li>
+<li>Cross-Site Request Forgeries</li>
+<li>SQL Injection</li>
+<li>Remote Code Injection</li>
+<li>Email Injection</li>
+<li>Filter Input</li>
+<li>Escape Output</li>
+<li>Encryption, Hashing algorithms</li>
+<li>File uploads</li>
+<li>Data storage</li>
+<li>SSL</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table summary="" width="100%" border="0" cellspacing="1" cellpadding="1" align="">
+<tbody>
+<tr>
+<th width="33%">Strings &amp; Patterns</th>
+<th width="33%">Databases</th>
+<th width="34%">Arrays</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li>Quoting</li>
+<li>Matching</li>
+<li>Extracting</li>
+<li>Searching</li>
+<li>Replacing</li>
+<li>Formatting</li>
+<li>PCRE</li>
+<li>HEREDOC and NOWDOC</li>
+<li>Encodings</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SQL</li>
+<li>Joins</li>
+<li>Analyzing Queries</li>
+<li>Prepared Statements</li>
+<li>Transactions</li>
+<li>PDO</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Enumerated Arrays</li>
+<li>Associative Arrays</li>
+<li>Array Iteration</li>
+<li>Multi-Dimensional Arrays</li>
+<li>Array Functions</li>
+<li>SPL, Objects as arrays</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;<br />
+Another article with more details <a href="http://0v1.ro/uncategorized/zend-certified-php-engineer-exam/">here</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Syntax</title>
+		<link>/php/syntax/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Tue, 10 Jan 2012 18:00:56 +0000</pubDate>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[PHP Basics]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[comments]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[syntax]]></category>
+		<category><![CDATA[tags]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=120</guid>
+
+					<description><![CDATA[Basic PHP syntax, all about closing tags abd php blocks, exceptions, best practice and some details about comments. &#8230; <a class="more" href="/php/syntax/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<h3><!--:en-->PHP tags</h3>
+<p>PHP code must be put between some special characters</p>
+<pre class="toolbar-overlay:true lang:php decode:true" title="PHP Basic Syntax">&lt;?php     ?&gt;
+&lt;?        ?&gt;    // with short_open_tag enabled or php with option --enable-short-tags
+&lt;script language="php"&gt; &lt;/script&gt;  // old style
+&lt;%        %&gt;    // ASP style asp_tags enabled</pre>
+<p>Other formats</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="Echo equivalents">&lt;?php echo 'message'; ?&gt;   // this are equivalents
+&lt;?= 'message'; ?&gt;     // if short_open_tag is enabled or PHP &gt; 5.4
+&lt;%= 'message'; ?&gt;   // if asp_tags is enabled</pre>
+<p>PHP blocks mixed with HTML code</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="PHP and HTML mixed">&lt;?php if ($expression == true): ?&gt;
+  Text if true &lt;img src="/image.jpg" /&gt;
+&lt;?php else: ?&gt;
+  HTML code for else &lt;a href="/branch.html"&gt;branch&lt;/a&gt;.
+&lt;?php endif; ?&gt;</pre>
+<p>Some exceptions</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="XML Exception">&lt;?php echo '&lt;?xml version="1.0" encoding="UTF-8" ?&gt;'; ?&gt;
+// xml files must start with this to be PHP compatible</pre>
+<pre class="toolbar-overlay:true lang:default decode:true">&lt;?php // not allowed as the only text in PHP 5.2 or less</pre>
+<p>Best practice</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="Best Practive">  ?&gt;  // don't use ending tags in php only files to prevent sending headers if you put a space after ?&gt;
+
+&lt;?= 'text'; ?&gt;  // not recomanded for redistributable code or changing environments</pre>
+<h3>Comments</h3>
+<p>Single line comments</p>
+<pre class="lang:default decode:true" title="Single line comments">&lt;?php // comment ?&gt;
+&lt;?php # comment ?&gt;
+
+&lt;?php // comment ends at the end of the line
+      //  or at ending tag ?&gt;   here is outside comment
+
+&lt;script language="php"&gt; //this comment doesn't end at script tag ending &lt;/scrip&gt;</pre>
+<p>Multiline comments</p>
+<pre class="lang:default decode:true" title="Multiline comment">&lt;?php /*  starts here
+          continues here
+          ends here     */   ?&gt;</pre>
+<p>Comments mistakes</p>
+<pre class="lang:default decode:true" title="Comment ends at first ?&gt;">&lt;?php
+       //echo '&lt;?php code ?&gt;'; ?&gt;</pre>
+<pre class="lang:default decode:true" title="First comment ends at the */ from the pattern">&lt;?php /*
+      $pattern = "/^\d.*/";
+      */</pre>
+<pre class="lang:default decode:true" title="Comment ends at first */">&lt;?php
+/*
+      echo 'Some text'; /* Can't imbricate multiline comments */
+*/</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

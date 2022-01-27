@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>diploma &#8211; ovi.ro</title>
+	<atom:link href="/tag/diploma/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Mon, 01 Oct 2012 18:00:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>ZCE Exam</title>
+		<link>/php/zce/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Mon, 01 Oct 2012 18:00:41 +0000</pubDate>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[diploma]]></category>
+		<category><![CDATA[exam]]></category>
+		<category><![CDATA[topics]]></category>
+		<category><![CDATA[zce]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=203</guid>
+
+					<description><![CDATA[ZCE all usefull details about the exam and the topics summary you sould study &#8230; <a class="more" href="/php/zce/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Zend PHP 5.3 Certification Exam is a measure of technical distinction that employers use to evaluate prospective employees.</p>
+<p>The exam consists of <strong>70 questions</strong> that must be answered in <strong>90 minutes</strong> and it cover the categories listed below. The questions are <strong>multiple choice</strong> (one or many responses) or <strong>free-form</strong> <strong>fields</strong> to fill in.</p>
+<p>The exam can be taken in any <a href="http://www.pearsonvue.com/zend/">Pearson VUE Testing Center</a> if you purchase a <strong>1 year valid</strong> voucher from the <a title="Zend Online Store - ZCE" href="http://shop.zend.com/en/zf-certification/zend-framework-certification-voucher.html">Zend Online Store</a> and you must have there <strong>2 identification forms</strong> (must have signature).</p>
+<p>You pass the exam if you answer more than 70% of the questions, then you will be listed in  <a href="http://www.zend.com/store/education/certification/yellow-pages.php">Zend Yellow Pages for PHP Professionals</a>, you&#8217;ll get a <strong>diploma</strong> in few weeks and you might get a <a title="Zend Studio" href="http://www.zend.com/en/products/studio/">Zend Studio free License</a></p>
+<p>You can find more info hre: <a title="ZCE" href="http://www.zend.com/services/certification/php-5-certification/">http://www.zend.com/services/certification/php-5-certification/</a></p>
+<p>The exam topics summary:</p>
+<table width="100%" border="0">
+<tbody>
+<tr>
+<th width="33%"><a title="PHP Basics Category" href="http://0v1.ro/category/php/zce-training/php-basics/">PHP Basics</a></th>
+<th width="33%">Functions</th>
+<th width="34%">Data Format &amp; Types</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li><a title="Php basic syntax" href="http://0v1.ro/php/syntax/">Syntax</a></li>
+<li><a title="Php operators Category" href="http://0v1.ro/category/php/zce-training/php-basics/operators/">Operators</a></li>
+<li><a href="/php/variables/">Variables</a></li>
+<li>Constants</li>
+<li>Control Structures</li>
+<li>Language Constructs and Functions</li>
+<li>Namespaces</li>
+<li>Extensions</li>
+<li>Config</li>
+<li>Performance/bytecode caching</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Syntax</li>
+<li>Arguments</li>
+<li>Variables</li>
+<li>References</li>
+<li>Returns</li>
+<li>Variable Scope</li>
+<li>Anonymous Functions, closures</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>XML Basics</li>
+<li>SimpleXML</li>
+<li>XML Extension</li>
+<li>Xpath</li>
+<li>Webservices Basics</li>
+<li>SOAP</li>
+<li>REST</li>
+<li>JSON &amp; AJAX</li>
+<li>DateTime</li>
+<li>DOMDocument</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table summary="" width="100%" border="0" cellspacing="1" cellpadding="1" align="">
+<tbody>
+<tr>
+<th width="33%">Web Features</th>
+<th width="33%">Object Oriented Programming</th>
+<th width="34%">Security</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li>Sessions</li>
+<li>Forms</li>
+<li>GET and POST data</li>
+<li>Cookies</li>
+<li>HTTP Headers</li>
+<li>HTTP Authentication</li>
+</ul>
+<table>
+<tbody>
+<tr>
+<th>I/O</th>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Files</li>
+<li>Reading</li>
+<li>Writing</li>
+<li>File System Functions</li>
+<li>Streams</li>
+<li>Contexts</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Instantiation</li>
+<li>Modifiers/Inheritance</li>
+<li>Interfaces</li>
+<li>Exceptions</li>
+<li>Static Methods &amp; Properties</li>
+<li>Autoload</li>
+<li>Reflection</li>
+<li>Type Hinting</li>
+<li>Class Constants</li>
+<li>Late Static Binding</li>
+<li>Magic (_*) Methods</li>
+<li>Instance Methods &amp; Properties</li>
+<li>Class Definition</li>
+<li>SPL</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Configuration</li>
+<li>Session Security</li>
+<li>Cross-Site Scripting</li>
+<li>Cross-Site Request Forgeries</li>
+<li>SQL Injection</li>
+<li>Remote Code Injection</li>
+<li>Email Injection</li>
+<li>Filter Input</li>
+<li>Escape Output</li>
+<li>Encryption, Hashing algorithms</li>
+<li>File uploads</li>
+<li>Data storage</li>
+<li>SSL</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table summary="" width="100%" border="0" cellspacing="1" cellpadding="1" align="">
+<tbody>
+<tr>
+<th width="33%">Strings &amp; Patterns</th>
+<th width="33%">Databases</th>
+<th width="34%">Arrays</th>
+</tr>
+<tr>
+<td>
+<ul>
+<li>Quoting</li>
+<li>Matching</li>
+<li>Extracting</li>
+<li>Searching</li>
+<li>Replacing</li>
+<li>Formatting</li>
+<li>PCRE</li>
+<li>HEREDOC and NOWDOC</li>
+<li>Encodings</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>SQL</li>
+<li>Joins</li>
+<li>Analyzing Queries</li>
+<li>Prepared Statements</li>
+<li>Transactions</li>
+<li>PDO</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Enumerated Arrays</li>
+<li>Associative Arrays</li>
+<li>Array Iteration</li>
+<li>Multi-Dimensional Arrays</li>
+<li>Array Functions</li>
+<li>SPL, Objects as arrays</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;<br />
+Another article with more details <a href="http://0v1.ro/uncategorized/zend-certified-php-engineer-exam/">here</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

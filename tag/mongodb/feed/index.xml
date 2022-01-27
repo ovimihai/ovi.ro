@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MongoDB &#8211; ovi.ro</title>
+	<atom:link href="/tag/mongodb/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Fri, 03 May 2013 17:59:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>MongoDB CheatSheet</title>
+		<link>/cheatsheets/mongodb-cheatsheet/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 03 May 2013 17:59:48 +0000</pubDate>
+				<category><![CDATA[CheatSheets]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[NoSQL]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=316</guid>
+
+					<description><![CDATA[MongoDB Cheat Sheet with most basic operations you'll need to do. It's work in progress so you might find more in the near future. &#8230; <a class="more" href="/cheatsheets/mongodb-cheatsheet/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>MongoDB is one of the best NoSQL databases out there. NoSQL might seem odd at first glance and may be hard to pass from relational to non-relational databases but in time you begin to see the advantages.</p>
+<p>MongoDB probably isn&#8217;t the only solution for your application, because if you need transations or complex joins you&#8217;ll need to put some of your data in relational databases, but you can store object like documents directly as you have them in your OOP environment.</p>
+<p>I didn&#8217;t find online any MongoDB cheatsheet and I thought it is a good ideea to start one on cheatography.</p>
+<p>You can find it on <a title="Cheatography" href="http://www.cheatography.com/" target="_blank" rel="noopener noreferrer">cheatography.com</a> searching for <a title="MongoDB CheatSheet on Cheatography" href="http://www.cheatography.com/ovi-mihai/cheat-sheets/mongodb/" target="_blank" rel="noopener noreferrer">MongoDB</a>. It is still in progress, but for basic operations you&#8217;ll find it usefull. I also plan to create a wider version here.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>job &#8211; ovi.ro</title>
+	<atom:link href="/tag/job/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Tue, 11 Apr 2017 07:33:57 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Job offer</title>
+		<link>/jobs/job-offer/</link>
+		
+		<dc:creator><![CDATA[Debugging Duck]]></dc:creator>
+		<pubDate>Tue, 11 Apr 2017 07:33:57 +0000</pubDate>
+				<category><![CDATA[jobs]]></category>
+		<category><![CDATA[duck]]></category>
+		<category><![CDATA[job]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=581</guid>
+
+					<description><![CDATA[I have this LinkedIn account for a while now.. I have around 2^7 connections and lots of Job Offers come in daily, but today I got the best since now! Here you have it: So I replied in plain English, &#8230; <a class="more" href="/jobs/job-offer/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>I have <a href="https://www.linkedin.com/in/ddbug/" target="_blank" rel="noopener noreferrer">this LinkedIn account</a> for a while now..<br />
+I have around 2^7 connections and lots of Job Offers come in daily,<br />
+but today I got the best since now!</p>
+<p>Here you have it:</p>
+<p><img class="wp-image-582" src="http://0v1.ro/xfiles/uploads/2017/04/mail_job.png" alt="Mac mac Maac !
+Mac,
+Mac mac mac...Mac-mac, Mac, Maac, Macc, mac ?
+Mac mac mac mac, mac mac Mac ^-^
+Mac mac,
+Maaaaaaac!
+Xyzxyz Abcabc Talent Acquisition Specialist@RINF Tech
+xyzxyz.abcabc@rinftech.com" width="469" /></p>
+<div style="clear: both"></div>
+<p>So I replied in plain English, because I also know that language (read my CV).<br />
+And thank her for the best Job offer <img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&nbsp;<br />
+<strong>Update:</strong> I got a reply back!</p>
+<p><a href="http://0v1.ro/xfiles/uploads/2017/04/mail_back.png"><img loading="lazy" class="alignnone size-full wp-image-606" src="http://0v1.ro/xfiles/uploads/2017/04/mail_back.png" alt="" width="369" height="310" /></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Security &#8211; ovi.ro</title>
+	<atom:link href="/category/php/zce-training/security/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Fri, 04 Sep 2015 15:12:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>How Tor works</title>
+		<link>/php/zce-training/security/how-tor-works/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2015 15:12:26 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=475</guid>
+
+					<description><![CDATA[Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS. The photo is provided by the EFF https://www.eff.org/pages/tor-and-https]]></description>
+										<content:encoded><![CDATA[<p>Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS.<br />
+The photo is provided by the EFF <a href="https://www.eff.org/pages/tor-and-https" target="_blank" rel="noopener noreferrer">https://www.eff.org/pages/tor-and-https</a></p>
+<p><img src="https://www.eff.org/files/tor-https-3.png" alt="" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

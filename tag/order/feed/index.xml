@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>order &#8211; ovi.ro</title>
+	<atom:link href="/tag/order/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Sat, 15 Dec 2012 18:00:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Operator Precedence</title>
+		<link>/php/zce-training/php-basics/operators/operator-precedence/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Sat, 15 Dec 2012 18:00:46 +0000</pubDate>
+				<category><![CDATA[Operators]]></category>
+		<category><![CDATA[operators]]></category>
+		<category><![CDATA[order]]></category>
+		<category><![CDATA[precedence]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=161</guid>
+
+					<description><![CDATA[PHP Operators precedence and exceptions &#8230; <a class="more" href="/php/zce-training/php-basics/operators/operator-precedence/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Like in math: 3 + 4 * 5 = 23 and not 35, in PHP you have an order for interpreting the code.</p>
+<table class="with-borders" width="780" border="0" cellspacing="0" cellpadding="0">
+<colgroup>
+<col />
+<col />
+<col width="248" /> </colgroup>
+<tbody>
+<tr>
+<th>Associativity</th>
+<th>Operators</th>
+<th width="248">Additional Information</th>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>clone new</td>
+<td width="248">clone<span> and </span><span>new</span></td>
+</tr>
+<tr>
+<td>left</td>
+<td>[</td>
+<td width="248"><a href="http://php.net/manual/ro/function.array.php">array()</a></td>
+</tr>
+<tr>
+<td>right</td>
+<td>++ &#8212; ~ (int) (float) (string) (array) (object) (bool) @</td>
+<td width="248">types<span> and </span><span>increment/decrement</span></td>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>instanceof</td>
+<td width="248"><a href="http://php.net/manual/ro/language.types.php">types</a></td>
+</tr>
+<tr>
+<td>right</td>
+<td>!</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>* / %</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.arithmetic.php">arithmetic</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>+ &#8211; .</td>
+<td width="248">arithmetic<span> ?i </span><span>string</span></td>
+</tr>
+<tr>
+<td>left</td>
+<td>&lt;&lt; &gt;&gt;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.bitwise.php">bitwise</a></td>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>&lt; &lt;= &gt; &gt;=</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.comparison.php">comparison</a></td>
+</tr>
+<tr>
+<td>non-associative</td>
+<td>== != === !== &lt;&gt;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.comparison.php">comparison</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>&amp;</td>
+<td width="248">bitwise<span> ?i </span><span>references</span></td>
+</tr>
+<tr>
+<td>left</td>
+<td>^</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.bitwise.php">bitwise</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>|</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.bitwise.php">bitwise</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>&amp;&amp;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>||</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>? :</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.comparison.php#language.operators.comparison.ternary">ternary</a></td>
+</tr>
+<tr>
+<td>right</td>
+<td>= += -= *= /= .= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;= =&gt;</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.assignment.php">assignment</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>and</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>xor</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>or</td>
+<td width="248"><a href="http://php.net/manual/ro/language.operators.logical.php">logical</a></td>
+</tr>
+<tr>
+<td>left</td>
+<td>,</td>
+<td width="248">many uses</td>
+</tr>
+</tbody>
+</table>
+<p>For operators that have the same precedence, the order is specified in the first column.<br />
+PHP also knows about <strong>Asociativity</strong>.</p>
+<p>Exception:</p>
+<pre class="lang:default decode:true"> if (!$a = foo())</pre>
+<p>Even if<strong> = </strong>has lower precedence than other operators (<strong>!</strong> here) the return falue of <strong>foo()</strong> is put into <strong>$a</strong>  before the negation</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

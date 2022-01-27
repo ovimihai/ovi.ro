@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>2 &#8211; ovi.ro</title>
+	<atom:link href="/tag/2/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Wed, 16 Jan 2013 08:30:46 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>jQuery Custom Autocomplete with two columns</title>
+		<link>/issues/jquery-custom-autocomplete-with-two-columns/</link>
+					<comments>/issues/jquery-custom-autocomplete-with-two-columns/#comments</comments>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Wed, 16 Jan 2013 08:30:46 +0000</pubDate>
+				<category><![CDATA[Issues]]></category>
+		<category><![CDATA[JavaScript Issues]]></category>
+		<category><![CDATA[2]]></category>
+		<category><![CDATA[autocomplete]]></category>
+		<category><![CDATA[two columns]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=261</guid>
+
+					<description><![CDATA[jQuery Custom Autocomplete with two ore columns for categorized search results. &#8230; <a class="more" href="/issues/jquery-custom-autocomplete-with-two-columns/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>How to create 2 columns autocomplete.</p>
+<p>This is a little bit non w3c compilant, but it works fine:)</p>
+<pre class="lang:default decode:true">&lt;style&gt;
+.resultBox{ float: left; width: 50%!important;}
+&lt;/style&gt;
+&lt;input type="text" id="search-box"&gt;</pre>
+<p>The ideea is to add two divs inside the results ul and render each result in the proper div</p>
+<pre class="lang:default decode:true">$.widget( "custom.twocolumnsautocomplete", $.ui.autocomplete, {
+		_renderMenu: function( ul, items ) {
+			var that = this,
+			currentCategory = "";
+			ul.addClass('searchAutocomplete');
+			// insert columns for the 2 categories: artists and songs
+			ul.append('&lt;div class="cat1 resultBox"&gt;&lt;li&gt;Category1&lt;/li&gt;&lt;/div&gt;');
+			ul.append('&lt;div class="cat2 resultBox"&gt;&lt;li&gt;Category2&lt;/li&gt;&lt;/div&gt;');
+			$.each( items, function( index, item ) {
+				// render li items for each category
+				that._renderItem( ul.find('.'+ item.category ), item );
+			});
+		}
+	});
+
+var data = [
+  {label: 'AAA', value: 'aaa', category: 'cat1'},
+  {label: 'ABB', value: 'abb', category: 'cat2'}
+];
+
+$('#search-box').twocolumnsautocomplete({
+  source: data
+});</pre>
+<p>Demo <a href="http://jsfiddle.net/ovi_mihai/Ybjq4/7/">http://jsfiddle.net/ovi_mihai/Ybjq4/7/</a></p>
+<p>For ajax data, please make sure the category ends up in your autocomplete return.</p>
+<p><strong>[EDIT] It seems there is a problem with the selection of items this doesn&#8217;t work as expected, it only looks good.</strong></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>/issues/jquery-custom-autocomplete-with-two-columns/feed/</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

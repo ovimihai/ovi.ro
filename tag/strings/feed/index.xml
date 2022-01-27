@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>strings &#8211; ovi.ro</title>
+	<atom:link href="/tag/strings/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Tue, 04 Apr 2017 07:43:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Compare strings in PHP</title>
+		<link>/php/sadness/compare-strings-in-php/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Tue, 04 Apr 2017 07:43:30 +0000</pubDate>
+				<category><![CDATA[Sadness]]></category>
+		<category><![CDATA[madness]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[strings]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=569</guid>
+
+					<description><![CDATA[Just read a comment in the PHP documentation and had another PHP madness moment. It seems you have to be really, really careful when comparing strings that include numbers&#8230; &#160; Command \ PHP Version 7.0.0 &#8211; 7.1.3 5.4.4 &#8211; 5.6.30 &#8230; <a class="more" href="/php/sadness/compare-strings-in-php/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Just read a <a href="http://php.net/manual/en/language.operators.comparison.php#114682">comment</a> in the PHP documentation and had another PHP madness moment.</p>
+<p>It seems you have to be really, really careful when comparing strings that include numbers&#8230;</p>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="800">Command \ PHP Version</td>
+<td width="75">7.0.0 &#8211; 7.1.3</td>
+<td width="83">5.4.4 &#8211; 5.6.30</td>
+<td width="76">5.2.1 &#8211; 5.4.3</td>
+</tr>
+<tr>
+<td>var_dump(&#8216;123&#8217; == &#8216;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 123&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;1e3&#8217; == &#8216;1000&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;+74951112233&#8217; == &#8216;74951112233&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;00000020&#8217; == &#8216;0000000000000000020&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0X1D&#8217; == &#8217;29E0&#8242;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xafebac&#8217; == &#8216;11529132&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xafebac&#8217; == &#8216;0XAFEBAC&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xeb&#8217; == &#8216;+235e-0&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #ff0000;"><strong>FALSE</strong></span></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0.235&#8217; == &#8216;+.235&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0.2e-10&#8217; == &#8216;2.0E-11&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;61529519452809720693702583126814&#8217; == &#8216;61529519452809720000000000000000&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+</tbody>
+</table>
+<p>https://3v4l.org/rop5S</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

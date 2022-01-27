@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>CheatSheets &#8211; ovi.ro</title>
+	<atom:link href="/category/cheatsheets/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Fri, 03 May 2013 17:59:48 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>MongoDB CheatSheet</title>
+		<link>/cheatsheets/mongodb-cheatsheet/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 03 May 2013 17:59:48 +0000</pubDate>
+				<category><![CDATA[CheatSheets]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[NoSQL]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=316</guid>
+
+					<description><![CDATA[MongoDB Cheat Sheet with most basic operations you'll need to do. It's work in progress so you might find more in the near future. &#8230; <a class="more" href="/cheatsheets/mongodb-cheatsheet/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>MongoDB is one of the best NoSQL databases out there. NoSQL might seem odd at first glance and may be hard to pass from relational to non-relational databases but in time you begin to see the advantages.</p>
+<p>MongoDB probably isn&#8217;t the only solution for your application, because if you need transations or complex joins you&#8217;ll need to put some of your data in relational databases, but you can store object like documents directly as you have them in your OOP environment.</p>
+<p>I didn&#8217;t find online any MongoDB cheatsheet and I thought it is a good ideea to start one on cheatography.</p>
+<p>You can find it on <a title="Cheatography" href="http://www.cheatography.com/" target="_blank" rel="noopener noreferrer">cheatography.com</a> searching for <a title="MongoDB CheatSheet on Cheatography" href="http://www.cheatography.com/ovi-mihai/cheat-sheets/mongodb/" target="_blank" rel="noopener noreferrer">MongoDB</a>. It is still in progress, but for basic operations you&#8217;ll find it usefull. I also plan to create a wider version here.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>CheatSheet Sources</title>
+		<link>/cheatsheets/cheatsheet-sources/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Wed, 13 Feb 2013 16:13:53 +0000</pubDate>
+				<category><![CDATA[CheatSheets]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[javascript]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=296</guid>
+
+					<description><![CDATA[Great list of websites that have cool cheatsheet files in diferent formats on a lot of topics, here mostly PHP, HTML, javascript etc. &#8230; <a class="more" href="/cheatsheets/cheatsheet-sources/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>CheatSheets are pieces of paper that sum up some importat aspects of a topic.</p>
+<p>Searching for PHP, Javascript, jQuery, etc. cheatsheets on the internet I found some great resources out there</p>
+<ul>
+<li><a href="http://www.cheatography.com/davechild/cheat-sheets/" target="_blank" rel="noopener noreferrer">Cheatography.com</a> seems to be the biggest searchable cheatsheets, but also in pdf format, literally hundreds</li>
+<li><a title="AddedBytes" href="http://www.addedbytes.com/cheat-sheets/" target="_blank" rel="noopener noreferrer">AddedBytes.com</a> great summaries, some of them cost $2, but most are for free</li>
+<li><a title="Woorkup" href="http://woorkup.com/" target="_blank" rel="noopener noreferrer">Woorkup.com</a> they have a great <a href="http://woorkup.com/wp-content/uploads/2011/05/jQuery-1.6-Visual-Cheat-Sheet.pdf" target="_blank" rel="noopener noreferrer">jQuery cheatsheet</a>, <a href="http://woork.blogspot.com/2009/09/html-5-visual-cheat-sheet-by-woork.html" target="_blank" rel="noopener noreferrer">HTML5</a>.</li>
+<li><a title="blueshoes.org" href="http://www.blueshoes.org/en/developer/php_cheat_sheet" target="_blank" rel="noopener noreferrer">Blueshoes.org</a> have some handy PHP tables to clear up some common mistakes beginner programmers do</li>
+<li><a title="Emezeta.com" href="http://www.emezeta.com/articulos/emezeta-card-php-cheat-sheet" target="_blank" rel="noopener noreferrer">Emezeta.com</a> &#8211; has a hudge PHP cheatsheet, I printed it on A3 format and it is great</li>
+<li><a title="Serversidemagazine.com" href="http://www.serversidemagazine.com/cheat-sheets/PHP5/" target="_blank" rel="noopener noreferrer">Serversidemagazine.com</a> has a fast prowsable page for quick reference</li>
+<li><a title="Dreamincode.net" href="http://www.dreamincode.net/" target="_blank" rel="noopener noreferrer">Dreamincode.net</a> &#8211; search for cheatsheet and you&#8217;l find a great <a title="PHP Cheatsheet" href="http://www.dreamincode.net/downloads/ref_sheets/php_reference_sheet.pdf" target="_blank" rel="noopener noreferrer">PHP</a> cheatsheet, and others for <a title="C++" href="http://www.dreamincode.net/forums/topic/12694-c-quick-reference-sheet-cheat-sheet/" target="_blank" rel="noopener noreferrer">C++</a>, <a title="C#" href="http://www.dreamincode.net/forums/topic/34988-c%23-basics-quick-reference-cheat-sheet/" target="_blank" rel="noopener noreferrer">C#</a>, <a title="Ruby" href="http://www.dreamincode.net/forums/topic/255958-basics-of-ruby-cheatsheet/" target="_blank" rel="noopener noreferrer">Ruby</a>, <a title="VB.NET" href="http://www.dreamincode.net/forums/topic/31908-vbnet-basics-quick-reference-cheat-sheet/" target="_blank" rel="noopener noreferrer">VB.NET</a> and much more</li>
+<li><a title="duvet-dayz.com" href="http://duvet-dayz.com/firebug-cheatsheet/" target="_blank" rel="noopener noreferrer">Duvet-dayz.com</a> &#8211; has a good cheatsheets for <a title="Firebug" href="http://duvet-dayz.com/firebug-cheatsheet/" target="_blank" rel="noopener noreferrer">FireBug</a></li>
+<li><a title="begoodnotbad.com" href="http://begoodnotbad.com/" target="_blank" rel="noopener noreferrer">BegoodNotBad.com</a> has an interesting cheatsheet widget on <a title="Cheatsheet on AppleStore" href="http://www.apple.com/downloads/dashboard/developer/phpcheatsheet.html" target="_blank" rel="noopener noreferrer">AppleStore</a>, or directly there for <a title="Css Cheatsheet" href="http://begoodnotbad.com/article/css_cheat_sheet/" target="_blank" rel="noopener noreferrer">CSS</a>, <a title="PHP CheatSheet" href="http://begoodnotbad.com/article/php_cheat_sheet/" target="_blank" rel="noopener noreferrer">PHP</a></li>
+</ul>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

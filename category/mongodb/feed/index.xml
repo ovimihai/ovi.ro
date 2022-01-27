@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>MongoDB &#8211; ovi.ro</title>
+	<atom:link href="/category/mongodb/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Fri, 26 May 2017 12:09:28 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>MongoDB more indexes on Secondaries</title>
+		<link>/mongodb/mongodb-more-indexes-on-secondaries/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 26 May 2017 12:09:28 +0000</pubDate>
+				<category><![CDATA[MongoDB]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=615</guid>
+
+					<description><![CDATA[I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0. Using this feature you can do reports&#160;better on a &#8230; <a class="more" href="/mongodb/mongodb-more-indexes-on-secondaries/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0.</p>
+<p>Using this feature you can do reports&nbsp;better on a secondary (maybe delayed too) secondary server. Make sure the journal is big enough to allow secondary indexes to be built.</p>
+<h2>Step 1: Build replica set</h2>
+<p>a. Here are the replica set config files:</p>
+<table>
+<tbody>
+<tr>
+<td>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s0.conf">dbpath = /tmp/mongo/data
+logpath = /tmp/mongo/log.log
+replSet = rs0
+port = 27100
+fork = true
+smallfiles = true
+</pre>
+</td>
+<td>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s1.conf">dbpath = /tmp/mongo/data1
+logpath = /tmp/mongo/log1.log
+replSet = rs0
+port = 27101
+fork = true
+smallfiles = true
+</pre>
+</td>
+<td>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s2.conf">dbpath = /tmp/mongo/data2
+logpath = /tmp/mongo/log2.log
+replSet = rs0
+port = 27102
+fork = true
+smallfiles = true
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>b. Start servers</p>
+<pre class="lang:sh decode:true ">&gt; mongod --config mongodb-rpl-s0.conf
+&gt; mongod --config mongodb-rpl-s1.conf
+&gt; mongod --config mongodb-rpl-s2.conf</pre>
+<p>c. Configure replica set members</p>
+<pre class="lang:js decode:true">&gt; mongo --port 27100
+rs.add("127.0.0.1:27100")
+rs.add("127.0.0.1:27101")
+rs.add({_id:2, host:"127.0.0.1:27102",priority:0})</pre>
+<p>d. Add some data and indexes</p>
+<pre class="lang:js decode:true">use testdb
+db.test.insert({a:1,b:1,c:1})
+db.test.insert({a:2,b:2,c:2})
+db.test.insert({a:3,b:3,c:3})
+db.ensureIndex({a:1})</pre>
+<h2>Step 2. Separate node and add indexes</h2>
+<p>a. Remove node from replicaset</p>
+<pre class="lang:js decode:true">rs.remove("127.0.0.1"27102")</pre>
+<p>b. Stop server</p>
+<pre class="lang:default decode:true">&gt; mongo --port 27102
+use admin
+db.db.shutdownServer()</pre>
+<p>c. Modify config outside the replica set</p>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s2.conf">dbpath = /tmp/mongo/data2
+logpath = /tmp/mongo/log2.log
+# replSet = rs0
+port = 27102
+fork = true
+smallfiles = true
+</pre>
+<p>d. Start server</p>
+<pre class="lang:sh decode:true">&gt; mongod --config mongodb-rpl-s2.conf</pre>
+<p>e. Add index</p>
+<pre class="lang:js decode:true">use testdb
+db.test.ensureIndex({c:1})</pre>
+<p>f. Meanwhile on the primary some inserts happen</p>
+<pre class="lang:js decode:true">db.test.insert({a:4,b:4,c:4})
+db.test.insert({a:5,b:5,c:5})</pre>
+<h2>Step 3. Rebuild replica set</h2>
+<p>a. Stop separated slave</p>
+<pre class="lang:default decode:true">mongo --port 27102
+use admin
+db.db.shutdownServer()</pre>
+<p>b. Modify back the config</p>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s2.conf">dbpath = /tmp/mongo/data2
+logpath = /tmp/mongo/log2.log
+replSet = rs0
+port = 27102
+fork = true
+smallfiles = true</pre>
+<p>c. Start server again</p>
+<pre class="lang:sh decode:true">&gt; mongod --config mongodb-rpl-s2.conf</pre>
+<p>d. Add back to replica set</p>
+<pre class="lang:js decode:true">&gt; mongo --port 27100
+rs.add({_id:2, host:"127.0.0.1:27102",priority:0})</pre>
+<p>e. Wait for synchronisation</p>
+<pre class="lang:js decode:true">&gt; mongo --port 27102
+use testdb
+db.test.find() // documents with a:1 and a:2 will be synced</pre>
+<p>f. Test queries on primary</p>
+<pre class="lang:js decode:true">mongo --port 27100
+db.test.find({a:1}).explain()
+{
+        "cursor" : "BtreeCursor a_1",
+        "indexBounds" : {"a" : [[1,1]]},
+        ...
+}
+db.test.find({c:1}).explain()    // NO INDEX ON c
+{
+        "cursor" : "BasicCursor",
+         ...
+}</pre>
+<p>g. Test queries on&nbsp;node 2</p>
+<pre class="lang:js decode:true">mongo --port 27102
+db.test.find({a:1}).explain()
+{
+        "cursor" : "BtreeCursor a_1",
+        "indexBounds" : {"a" : [[1,1]]},
+        ...
+}
+db.test.find({c:1}).explain()    // HAVE AN INDEX ON c
+{
+        "cursor" : "BtreeCursor c_1",
+        "indexBounds" : {"c" : [[1,1]]},
+        ...
+}</pre>
+<p>Didn&#8217;t have time for benchmarking, will do probably this in another post</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>M101JS Videos</title>
+		<link>/mongodb/m101js/m101js-videos/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Mon, 26 May 2014 20:08:51 +0000</pubDate>
+				<category><![CDATA[M101JS]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=365</guid>
+
+					<description><![CDATA[Mongo University has a collection of great MongoDB courses that help developers into first steps and further understanding MongoDB and NoSQL concepts. Here you have the list of videos from the course. If you didn&#8217;t register to the course you &#8230; <a class="more" href="/mongodb/m101js/m101js-videos/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Mongo University has a collection of great MongoDB courses that help developers into first steps and further understanding MongoDB and NoSQL concepts.</p>
+<p>Here you have the list of videos from the course. If you didn&#8217;t register to the course you can see them on YouTube.<br />
+If you like the videos you can register for the courses for free and if you do all homework and the final exam you&#8217;ll get a certificate that you finished the course.</p>
+<p><a href="http://www.youtube.com/playlist?list=PLrGBH-HqwktMbWVnwFZLHAqXAmjhzOqqB" target="_blank" rel="noopener noreferrer">Week 1 playlist</a><br />
+<a href="http://www.youtube.com/playlist?list=PLrGBH-HqwktMvwBj5svoIubykD_EpadBO" target="_blank" rel="noopener noreferrer">Week 2 playlist</a></p>
+<table>
+<tbody>
+<tr>
+<th>Week 1</th>
+<th>Week 2</th>
+</tr>
+<tr>
+<td><a href="http://www.youtube.com/watch?v=t5bQQL9d3Dg" target="_blank" rel="noopener noreferrer">Welcome to M101JS (Lecture) </a><a href="http://www.youtube.com/watch?v=Ib-cFeUPIfw" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=Lfl8hdQOi6Y" target="_blank" rel="noopener noreferrer">What is MongoDB (Lecture) </a><a href="http://www.youtube.com/watch?v=CAR42sMkXEo" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=-KIC1LXxcGM" target="_blank" rel="noopener noreferrer">Mongo Relative to Relational (Lecture) </a><a href="http://www.youtube.com/watch?v=IAvnMgvHuLw" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=iIhgggzzeoA" target="_blank" rel="noopener noreferrer">Overview of Building an App with Mongo (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=gUHV4dTl1p4" target="_blank" rel="noopener noreferrer">System Requirements (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=7zzLSZQoSCI" target="_blank" rel="noopener noreferrer">Installing MongoDB (mac) (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=hX5louVryOQ" target="_blank" rel="noopener noreferrer">Installing MongoDB (windows) (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=j2v865GGS2A" target="_blank" rel="noopener noreferrer">Quick Introduction to the Mongo Shell (Lecture) </a><a href="http://www.youtube.com/watch?v=11lpX9YmUb4" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=vRgKPRrl2Ww" target="_blank" rel="noopener noreferrer">JSON Introduced (Lecture) </a><a href="http://www.youtube.com/watch?v=3qZnmjdgRrE" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=3-u5Ih7kd0A" target="_blank" rel="noopener noreferrer">Installing Node.js (mac) (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=ORKA9Ay9jfs" target="_blank" rel="noopener noreferrer">Asynchronous vs Synchronous (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=Fv5Q_02BKrM" target="_blank" rel="noopener noreferrer">Hello World on Node.js (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=KkWoaHOtGnk" target="_blank" rel="noopener noreferrer">Introduction to npm (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=SgQv3KWEGDc" target="_blank" rel="noopener noreferrer">Hello World MongoDB Style (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=wSAOfA-BMCM" target="_blank" rel="noopener noreferrer">Hello World using Express (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=0aG8aBUP6nQ" target="_blank" rel="noopener noreferrer">Hello World using Express and Swig (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=KJMHteZRyXQ" target="_blank" rel="noopener noreferrer">Hello World using Express, Swig, and MongoDB (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=DZkLTikYqc4" target="_blank" rel="noopener noreferrer">Express: Handling GET Requests (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=rGWwQE89reU" target="_blank" rel="noopener noreferrer">Express: Handling POST Requests (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=K6dlBbH_XHI" target="_blank" rel="noopener noreferrer">Mongo is Schemaless (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=zbYCcMWJGNY" target="_blank" rel="noopener noreferrer">JSON Revisited (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=JkK9n6_ahVk" target="_blank" rel="noopener noreferrer">JSON Arrays (Lecture) </a><a href="http://www.youtube.com/watch?v=ciuq7XPqHKI" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=vrYAEH3g13M" target="_blank" rel="noopener noreferrer">JSON Subdocuments (Lecture) </a><a href="http://www.youtube.com/watch?v=NGp_y6BaEMw" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=kOrsT94-A28" target="_blank" rel="noopener noreferrer">JSON Spec (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=ePi3kDoexoM" target="_blank" rel="noopener noreferrer">Introduction to Our Class Project, The Blog. (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=boR2y9MHCa0" target="_blank" rel="noopener noreferrer">Blog in Relational Tables (Lecture) </a><a href="http://www.youtube.com/watch?v=vB-4AbbLKeg" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=ZjwCzyqKVdY" target="_blank" rel="noopener noreferrer">Blog in Documents (Lecture) </a><a href="http://www.youtube.com/watch?v=WJblHPsp1p4" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=6XE3wZCPiZ8" target="_blank" rel="noopener noreferrer">Introduction to Schema Design (Lecture) </a><a href="http://www.youtube.com/watch?v=wiwOEG_6ojs" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=sA-iH3IJ72o" target="_blank" rel="noopener noreferrer">Homework 1.1 (Lecture)</a></td>
+<td><a href="http://www.youtube.com/watch?v=o2SzezDffW4" target="_blank" rel="noopener noreferrer">Introduction to Week 2 (Lecture</a>)<br />
+<a href="http://www.youtube.com/watch?v=C7LinMC2o5o" target="_blank" rel="noopener noreferrer">CRUD and the Mongo Shell (Lecture) </a><a href="http://www.youtube.com/watch?v=nWOt4VN6Y3g" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=hJy10xgZXzc" target="_blank" rel="noopener noreferrer">Secrets of the Mongo Shell (Lecture) </a><a href="http://www.youtube.com/watch?v=a6TFwpCoLoY" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=K3J6WvDW-Hc" target="_blank" rel="noopener noreferrer">Introduction to BSON (Lecture)</a><a href="http://www.youtube.com/watch?v=4hsTQrMs-xY" target="_blank" rel="noopener noreferrer"> (Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=RbRRvBLl7Qo" target="_blank" rel="noopener noreferrer">Inserting Docs (Lecture) </a><a href="http://www.youtube.com/watch?v=4eqpL7ETQZQ" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=w9V0fJsDwbQ" target="_blank" rel="noopener noreferrer">Introduction to findOne (Lecture) </a><a href="http://www.youtube.com/watch?v=uN_wf5a3BE4" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=8kKfFK6a0Ak" target="_blank" rel="noopener noreferrer">Introdution to find (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=UIg86QjSoyY" target="_blank" rel="noopener noreferrer">Querying Using Field Selection (Lecture) </a><a href="http://www.youtube.com/watch?v=ouHFZgtEAuU" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=FHLrz4VGzkg" target="_blank" rel="noopener noreferrer">Querying using <code>$gt</code> and <code>$lt</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=tY7I1l8JdDI" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=imCCKOevU3c" target="_blank" rel="noopener noreferrer">Inequalities on Strings (Lecture) </a><a href="http://www.youtube.com/watch?v=ZRWT0lcHsoU" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=lI-jhqYf1JY" target="_blank" rel="noopener noreferrer">Using regexes, <code>$exists</code>, <code>$type</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=yMi7PwOoqXY" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=BW5ElNCRZps" target="_blank" rel="noopener noreferrer">Using <code>$or</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=diimYkvr374" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=hYk7pjgjjzc" target="_blank" rel="noopener noreferrer">Using <code>$and</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=oIkSajy8NLw" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=jvEqwW75Bus" target="_blank" rel="noopener noreferrer">Querying Inside Arrays (Lecture) </a><a href="http://www.youtube.com/watch?v=gwECaa4N9Xc" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=QU2NrkviORE" target="_blank" rel="noopener noreferrer">Using <code>$in</code> and <code>$all</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=6O1UGHwuEww" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=NrjFECIfwqk" target="_blank" rel="noopener noreferrer">Queries with Dot Notation (Lecture) </a><a href="http://www.youtube.com/watch?v=yiEjK_V008s" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=3jA6iFSEJOI" target="_blank" rel="noopener noreferrer">Querying, Cursors (Lecture) </a><a href="http://www.youtube.com/watch?v=djzpK7UIO94" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=eKD5bVmNQMI" target="_blank" rel="noopener noreferrer">Counting Results (Lecture) </a><a href="http://www.youtube.com/watch?v=Uozp0diXOc8" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=EBCk6W7x-OY" target="_blank" rel="noopener noreferrer">Wholesale Updating of a Document (Lecture) </a><a href="http://www.youtube.com/watch?v=pwnRUdtI8lY" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=9iMX2KxYAd8" target="_blank" rel="noopener noreferrer">Using the <code>$set</code> Command (Lecture) </a><a href="http://www.youtube.com/watch?v=F6ZY_VVAXZ8" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=OBX9q4kqweA" target="_blank" rel="noopener noreferrer">Using the <code>$unset</code> Command (Lecture) </a><a href="http://www.youtube.com/watch?v=edqDAKMQTv4" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=iHSwyr7bfQs" target="_blank" rel="noopener noreferrer">Using <code>$push</code>, <code>$pop</code>, <code>$pull</code>, <code>$pushAll</code>, <code>$pullAll</code>, <code>$addToSet</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=bGbiIGEM0FY" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=dfvwrlVODGc" target="_blank" rel="noopener noreferrer">Upserts (Lecture) </a><a href="http://www.youtube.com/watch?v=Loo5XKQAryM" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=8uNNDduO09w" target="_blank" rel="noopener noreferrer">Multi-update (Lecture) </a><a href="http://www.youtube.com/watch?v=B1DqIls06Tc" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=PMhGgc3HCn4" target="_blank" rel="noopener noreferrer">Removing Data (Lecture) </a><a href="http://www.youtube.com/watch?v=T3wcuZHm6Ac" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=kUulkJQvH_A" target="_blank" rel="noopener noreferrer">getLastError (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=elGy_YOtn4Q" target="_blank" rel="noopener noreferrer">Node.js Driver: find, findOne, and cursors (Lecture) </a><a href="http://www.youtube.com/watch?v=RfFQrjRL3RQ" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=i-C8I5xrvn0" target="_blank" rel="noopener noreferrer">Node.js Driver: Using Field Projection (Lecture) </a><a href="http://www.youtube.com/watch?v=nMtZ1hmppVo" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=jhqdI1xLVWg" target="_blank" rel="noopener noreferrer">Node.js Driver: Using <code>$gt</code> and <code>$lt</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=qEOgkYB8r_k" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=2pMtlTeJ8Ek" target="_blank" rel="noopener noreferrer">Importing Reddit (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=gQVnirqZEbM" target="_blank" rel="noopener noreferrer">Node.js Driver: Using <code>$regex</code> (Lecture) </a><a href="http://www.youtube.com/watch?v=dBo4scpq_P4" target="_blank" rel="noopener noreferrer">(Answer)</a><br />
+<a href="http://www.youtube.com/watch?v=YNA4EnxgdQY" target="_blank" rel="noopener noreferrer">Node.js Driver: Using Dot Notation (Lecture) </a><a href="http://www.youtube.com/watch?v=6Iy7edNKl0Q" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=GD78tbm_qvQ" target="_blank" rel="noopener noreferrer">Node.js Driver: Skip, Limit and Sort (Lecture) </a><a href="http://www.youtube.com/watch?v=t0runNOwPdY" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=zrDCLNYbKNU" target="_blank" rel="noopener noreferrer">Node.js Driver: Inserting, _id (Lecture) </a><a href="http://www.youtube.com/watch?v=y_qyqkNuZMQ" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=hf85eZvYosY" target="_blank" rel="noopener noreferrer">Node.js Driver: Updating (Lecture) </a><a href="http://www.youtube.com/watch?v=MNLN8k57lf0" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=msse79yvaEo" target="_blank" rel="noopener noreferrer">Node.js Driver: Upserts (Lecture) </a><a href="http://www.youtube.com/watch?v=atzwFFtqsjA" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=QnQxACsXrBk" target="_blank" rel="noopener noreferrer">Node.js Driver: findAndModify (Lecture) </a><a href="http://www.youtube.com/watch?v=BxBa3Oos_LQ" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=9Rl2-gzLy20" target="_blank" rel="noopener noreferrer">Node.js Driver: Remove (Lecture) </a><a href="http://www.youtube.com/watch?v=U2OUHMc1JNA" target="_blank" rel="noopener noreferrer">(Answer) </a><br />
+<a href="http://www.youtube.com/watch?v=TcDqVQxYWZ0" target="_blank" rel="noopener noreferrer">Blog Introduction (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=M8NCh6JqG8Q" target="_blank" rel="noopener noreferrer">Blog Application Architecture (Lecture)</a><br />
+<a href="http://www.youtube.com/watch?v=jsZPyeM0RF0" target="_blank" rel="noopener noreferrer">Blog, Session Management (Lecture) </a></td>
+</tr>
+</tbody>
+</table>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MongoDB CRUD Operations</title>
+		<link>/mongodb/mongodb-crud-operations/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Wed, 22 May 2013 19:45:05 +0000</pubDate>
+				<category><![CDATA[MongoDB]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=324</guid>
+
+					<description><![CDATA[MongoBD basic operations to create, read, update and delete data. A quick overview on this topic and links for more details. &#8230; <a class="more" href="/mongodb/mongodb-crud-operations/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>MongoDB is a NoSQL database and supports all the classic CRUD ( Create, Read, Update, Delete ) operations.</p>
+<p>To perform all this operations you have to select first a database and use the database pointer to select a collection ( collections are tables in the SQL world )</p>
+<pre class="lang:js decode:true">use DatabaseName   // select a database
+db.colectionName   // point to a colection in the selected database</pre>
+<p>You <strong>C</strong>reate stuff with the <strong>insert</strong> method</p>
+<pre class="lang:default decode:true">db.collection.insert( document|array )</pre>
+<p>MongoDB automatically creates an &#8220;_id&#8221; (MongoID) for each record you insert, but you can also specify any unique _id you want. MongoDB drivers generate the MongoID before it sends the insert to the database, so you don&#8217;t need to wait for the response to get the lastInsertedId like in SQL databases. <a title="MongoDB Create operation" href="http://docs.mongodb.org/manual/core/create/" target="_blank" rel="noopener noreferrer">See documentation</a></p>
+<p>To <strong>R</strong>ead data from the database you can use the <strong>find</strong> method</p>
+<pre class="lang:js decode:true">db.collection.find( query, projection )</pre>
+<p>The query in MongoDB is not an SQL query, but it is an JSON-like object with some special keys for special operations, the simplest example would be something like <strong>{ key: &#8220;value&#8221; }</strong>. The projection is something similar with the field specification in SQL, by default is like &#8220;*&#8221;, you wil return the whole document. <a title="MongoDB Read operation" href="http://docs.mongodb.org/manual/core/read/" target="_blank" rel="noopener noreferrer">See documentation</a></p>
+<p>To <strong>U</strong>pdate documents from the database you can use <strong>upate</strong> or <strong>save</strong> methods</p>
+<pre class="lang:default decode:true">db.collection.update( query, update, options )</pre>
+<p>The query is a JSON-like match to find the desired data, the update is either a whole document, either an JSON-like object using the special keys $set, $unset key values or $push to array values. The options is an object that can specify if you want multiple updates or insert if no document matched the query.</p>
+<pre class="lang:default decode:true">db.collection.save( document )</pre>
+<p>Save performs an update if you specify the <em>_id</em> or an insert if you don&#8217;t. <a title="MongoDB Update operation" href="http://docs.mongodb.org/manual/core/update/" target="_blank" rel="noopener noreferrer">See documentation</a></p>
+<p>To <strong>D</strong>elete data you can use the <strong>remove</strong> method</p>
+<pre>db.collection.remove( query, justOne )</pre>
+<p>This deletes use the query to match what you want to delete and a flag for multiple or single deletes (justOne = true means only one delete) <a title="MongoDB Delete operation" href="http://docs.mongodb.org/manual/core/delete/" target="_blank" rel="noopener noreferrer">See documentation</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MongoDB CheatSheet</title>
+		<link>/cheatsheets/mongodb-cheatsheet/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 03 May 2013 17:59:48 +0000</pubDate>
+				<category><![CDATA[CheatSheets]]></category>
+		<category><![CDATA[MongoDB]]></category>
+		<category><![CDATA[cheatsheet]]></category>
+		<category><![CDATA[NoSQL]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=316</guid>
+
+					<description><![CDATA[MongoDB Cheat Sheet with most basic operations you'll need to do. It's work in progress so you might find more in the near future. &#8230; <a class="more" href="/cheatsheets/mongodb-cheatsheet/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>MongoDB is one of the best NoSQL databases out there. NoSQL might seem odd at first glance and may be hard to pass from relational to non-relational databases but in time you begin to see the advantages.</p>
+<p>MongoDB probably isn&#8217;t the only solution for your application, because if you need transations or complex joins you&#8217;ll need to put some of your data in relational databases, but you can store object like documents directly as you have them in your OOP environment.</p>
+<p>I didn&#8217;t find online any MongoDB cheatsheet and I thought it is a good ideea to start one on cheatography.</p>
+<p>You can find it on <a title="Cheatography" href="http://www.cheatography.com/" target="_blank" rel="noopener noreferrer">cheatography.com</a> searching for <a title="MongoDB CheatSheet on Cheatography" href="http://www.cheatography.com/ovi-mihai/cheat-sheets/mongodb/" target="_blank" rel="noopener noreferrer">MongoDB</a>. It is still in progress, but for basic operations you&#8217;ll find it usefull. I also plan to create a wider version here.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

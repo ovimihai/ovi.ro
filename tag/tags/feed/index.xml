@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>tags &#8211; ovi.ro</title>
+	<atom:link href="/tag/tags/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Tue, 10 Jan 2012 18:00:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Syntax</title>
+		<link>/php/syntax/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Tue, 10 Jan 2012 18:00:56 +0000</pubDate>
+				<category><![CDATA[PHP]]></category>
+		<category><![CDATA[PHP Basics]]></category>
+		<category><![CDATA[ZCE Training]]></category>
+		<category><![CDATA[comments]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[syntax]]></category>
+		<category><![CDATA[tags]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=120</guid>
+
+					<description><![CDATA[Basic PHP syntax, all about closing tags abd php blocks, exceptions, best practice and some details about comments. &#8230; <a class="more" href="/php/syntax/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<h3><!--:en-->PHP tags</h3>
+<p>PHP code must be put between some special characters</p>
+<pre class="toolbar-overlay:true lang:php decode:true" title="PHP Basic Syntax">&lt;?php     ?&gt;
+&lt;?        ?&gt;    // with short_open_tag enabled or php with option --enable-short-tags
+&lt;script language="php"&gt; &lt;/script&gt;  // old style
+&lt;%        %&gt;    // ASP style asp_tags enabled</pre>
+<p>Other formats</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="Echo equivalents">&lt;?php echo 'message'; ?&gt;   // this are equivalents
+&lt;?= 'message'; ?&gt;     // if short_open_tag is enabled or PHP &gt; 5.4
+&lt;%= 'message'; ?&gt;   // if asp_tags is enabled</pre>
+<p>PHP blocks mixed with HTML code</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="PHP and HTML mixed">&lt;?php if ($expression == true): ?&gt;
+  Text if true &lt;img src="/image.jpg" /&gt;
+&lt;?php else: ?&gt;
+  HTML code for else &lt;a href="/branch.html"&gt;branch&lt;/a&gt;.
+&lt;?php endif; ?&gt;</pre>
+<p>Some exceptions</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="XML Exception">&lt;?php echo '&lt;?xml version="1.0" encoding="UTF-8" ?&gt;'; ?&gt;
+// xml files must start with this to be PHP compatible</pre>
+<pre class="toolbar-overlay:true lang:default decode:true">&lt;?php // not allowed as the only text in PHP 5.2 or less</pre>
+<p>Best practice</p>
+<pre class="toolbar-overlay:true lang:default decode:true" title="Best Practive">  ?&gt;  // don't use ending tags in php only files to prevent sending headers if you put a space after ?&gt;
+
+&lt;?= 'text'; ?&gt;  // not recomanded for redistributable code or changing environments</pre>
+<h3>Comments</h3>
+<p>Single line comments</p>
+<pre class="lang:default decode:true" title="Single line comments">&lt;?php // comment ?&gt;
+&lt;?php # comment ?&gt;
+
+&lt;?php // comment ends at the end of the line
+      //  or at ending tag ?&gt;   here is outside comment
+
+&lt;script language="php"&gt; //this comment doesn't end at script tag ending &lt;/scrip&gt;</pre>
+<p>Multiline comments</p>
+<pre class="lang:default decode:true" title="Multiline comment">&lt;?php /*  starts here
+          continues here
+          ends here     */   ?&gt;</pre>
+<p>Comments mistakes</p>
+<pre class="lang:default decode:true" title="Comment ends at first ?&gt;">&lt;?php
+       //echo '&lt;?php code ?&gt;'; ?&gt;</pre>
+<pre class="lang:default decode:true" title="First comment ends at the */ from the pattern">&lt;?php /*
+      $pattern = "/^\d.*/";
+      */</pre>
+<pre class="lang:default decode:true" title="Comment ends at first */">&lt;?php
+/*
+      echo 'Some text'; /* Can't imbricate multiline comments */
+*/</pre>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

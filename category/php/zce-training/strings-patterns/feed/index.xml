@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Strings &amp; Patterns &#8211; ovi.ro</title>
+	<atom:link href="/category/php/zce-training/strings-patterns/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Sat, 25 Apr 2015 09:19:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Regex</title>
+		<link>/php/zce-training/strings-patterns/regex/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Sat, 25 Apr 2015 09:19:27 +0000</pubDate>
+				<category><![CDATA[Strings & Patterns]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=421</guid>
+
+					<description><![CDATA[Documentation Cheatsheet: Dave Child, Dzone, RegexOne Tools: (Online) RegExr, Regex101, RagexPal, RegexPlanet, (Offline) Rad Software (free) or RegexBuddy (paid)]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.regular-expressions.info/" target="new" rel="noopener noreferrer">Documentation</a><br />
+Cheatsheet: <a href="http://www.cheatography.com/davechild/cheat-sheets/regular-expressions/" target="new" rel="noopener noreferrer">Dave Child</a>, <a href="http://refcardz.dzone.com/refcardz/regular-expressions">Dzone</a>, <a href="http://regexone.com/cheatsheet" target="new" rel="noopener noreferrer">RegexOne</a><br />
+Tools: (Online) <a href="http://www.regexr.com/" target="new" rel="noopener noreferrer">RegExr</a>, <a href="https://regex101.com/" target="new" rel="noopener noreferrer">Regex101</a>, <a href="http://regexpal.com/" target="new" rel="noopener noreferrer">RagexPal</a>, <a href="http://www.regexplanet.com/advanced/java/index.html" target="new" rel="noopener noreferrer">RegexPlanet</a>, <br />(Offline) <a href="http://rad-software-regular-expression-designer.software.informer.com/" target="new" rel="noopener noreferrer">Rad Software</a> (free) or <a href="http://www.regexbuddy.com/" target="new" rel="noopener noreferrer">RegexBuddy</a> (paid)</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

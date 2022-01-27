@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>eLearning &#8211; ovi.ro</title>
+	<atom:link href="/category/elearning/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Sat, 18 Apr 2015 07:33:30 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Udemy &#8211; lots of discounts</title>
+		<link>/elearning/udemy-lots-of-discounts/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Sat, 18 Apr 2015 07:33:30 +0000</pubDate>
+				<category><![CDATA[eLearning]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=398</guid>
+
+					<description><![CDATA[Udemy.com is an online learning platform that has a lot of interesting courses in many domains and they also provide a platform for teachers to create and market their tutorials/courses. The prices seem pretty hight at first glance, but if &#8230; <a class="more" href="/elearning/udemy-lots-of-discounts/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Udemy.com is an online learning platform that has a lot of interesting courses in many domains and they also provide a platform for teachers to create and market their tutorials/courses.</p>
+<p>The prices seem pretty hight at first glance, but if you really want a certain course you can add it in your wishlist and they will notify you when they have promos.</p>
+<p>This year they had a lot of promotions, you could get courses for 15-20 $, even now they have a coupon promo for a certain &#8220;Teacher&#8221; at least with this code &#8220;APRILBLAST&#8221;</p>
+<p>go to <a href="https://www.udemy.com/u/marktrego">https://www.udemy.com/u/marktrego</a> and check out the courses</p>
+<p>Enjoy!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

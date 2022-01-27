@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirecting...</title>
+		<meta http-equiv="refresh" content="0;url=httpsovi.ro/tag/feed/">
+	</head>
+	<body>
+		<script type="text/javascript">
+			window.location = "httpsovi.ro/tag/feed/";
+		</script>
+
+		<p>You are being redirected to <a href="httpsovi.ro/tag/feed/">httpsovi.ro/tag/feed/</a></p>
+	</body>
+</html>

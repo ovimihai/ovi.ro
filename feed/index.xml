@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ovi.ro</title>
+	<atom:link href="/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Fri, 10 Aug 2018 07:47:06 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Google Colab &#8211; a free environment to run Machine Learning Python</title>
+		<link>/python/google-colab-a-free-environment-to-run-machine-learning-python/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 10 Aug 2018 07:47:06 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[Golab]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=637</guid>
+
+					<description><![CDATA[Google Colab is a great free environment for trying out python and Machine Learning tutorials &#8230; <a class="more" href="/python/google-colab-a-free-environment-to-run-machine-learning-python/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<div class="topic-meta-data">&nbsp;</div>
+<div class="regular contents">
+<div class="cooked">
+<p>While working on a new project, I was told about Google Colab.<br />
+<a class="onebox" href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="nofollow noopener noreferrer">https://colab.research.google.com/notebooks/welcome.ipynb</a></p>
+<p>This is mainly a web interface to a Linux container where you have root access and by default you can run python code.<br />
+You can even use Machine Learning libraries and run the code on a GPU.<br />
+You have bash commands and root access on the container, so you pretty much can do everything you want, but you are limited to some CPU and RAM. I handled at some point a 5GB file and tried some clustering on that data but failed&nbsp;<img class="emoji" title=":slight_smile:" src="https://discourse.emag.network/images/emoji/emoji_one/slight_smile.png?v=3" alt=":slight_smile:">&nbsp;I managed to make it work after reducing some dimensions.</p>
+<p>There are a lot of useful notebooks with examples that you can open by default and you can use your other Google Resources like Drive, Cloud Storage, BigQuery, upload &#8211; download files, wget stuff from the internet, even crawl&nbsp;<img class="emoji" title=":slight_smile:" src="https://discourse.emag.network/images/emoji/emoji_one/slight_smile.png?v=3" alt=":slight_smile:"></p>
+<ul>
+<li><a href="https://colab.research.google.com/notebooks/io.ipynb">https://colab.research.google.com/notebooks/io.ipynb</a></li>
+<li><a href="https://colab.research.google.com/notebooks/bigquery.ipynb">https://colab.research.google.com/notebooks/bigquery.ipynb</a></li>
+<li><a href="https://colab.research.google.com/notebooks/bigquery.ipynb">https://colab.research.google.com/notebooks/snippets/importing_libraries.ipynb</a></li>
+<li><a href="https://colab.research.google.com/notebooks/markdown_guide.ipynb">https://colab.research.google.com/notebooks/markdown_guide.ipynb</a></li>
+</ul>
+<p>Try it out! You only need a Google account and maybe Chrome (on Firefox, Safari and Opera I had some small issues)</p>
+</div>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Thug life</title>
+		<link>/jobs/thug-life/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Thu, 05 Oct 2017 13:36:36 +0000</pubDate>
+				<category><![CDATA[jobs]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=630</guid>
+
+					<description><![CDATA[Still getting added on LinkedIn, and lots of offers]]></description>
+										<content:encoded><![CDATA[<p>Still getting added on LinkedIn, and lots of offers<br />
+<a href="http://0v1.ro/xfiles/uploads/2017/10/rubber_duck2.png"><img loading="lazy" class="alignnone wp-image-631 size-full" src="http://0v1.ro/xfiles/uploads/2017/10/rubber_duck2.png" alt="" width="912" height="509"></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>MongoDB more indexes on Secondaries</title>
+		<link>/mongodb/mongodb-more-indexes-on-secondaries/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 26 May 2017 12:09:28 +0000</pubDate>
+				<category><![CDATA[MongoDB]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=615</guid>
+
+					<description><![CDATA[I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0. Using this feature you can do reports&#160;better on a &#8230; <a class="more" href="/mongodb/mongodb-more-indexes-on-secondaries/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0.</p>
+<p>Using this feature you can do reports&nbsp;better on a secondary (maybe delayed too) secondary server. Make sure the journal is big enough to allow secondary indexes to be built.</p>
+<h2>Step 1: Build replica set</h2>
+<p>a. Here are the replica set config files:</p>
+<table>
+<tbody>
+<tr>
+<td>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s0.conf">dbpath = /tmp/mongo/data
+logpath = /tmp/mongo/log.log
+replSet = rs0
+port = 27100
+fork = true
+smallfiles = true
+</pre>
+</td>
+<td>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s1.conf">dbpath = /tmp/mongo/data1
+logpath = /tmp/mongo/log1.log
+replSet = rs0
+port = 27101
+fork = true
+smallfiles = true
+</pre>
+</td>
+<td>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s2.conf">dbpath = /tmp/mongo/data2
+logpath = /tmp/mongo/log2.log
+replSet = rs0
+port = 27102
+fork = true
+smallfiles = true
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+<p>b. Start servers</p>
+<pre class="lang:sh decode:true ">&gt; mongod --config mongodb-rpl-s0.conf
+&gt; mongod --config mongodb-rpl-s1.conf
+&gt; mongod --config mongodb-rpl-s2.conf</pre>
+<p>c. Configure replica set members</p>
+<pre class="lang:js decode:true">&gt; mongo --port 27100
+rs.add("127.0.0.1:27100")
+rs.add("127.0.0.1:27101")
+rs.add({_id:2, host:"127.0.0.1:27102",priority:0})</pre>
+<p>d. Add some data and indexes</p>
+<pre class="lang:js decode:true">use testdb
+db.test.insert({a:1,b:1,c:1})
+db.test.insert({a:2,b:2,c:2})
+db.test.insert({a:3,b:3,c:3})
+db.ensureIndex({a:1})</pre>
+<h2>Step 2. Separate node and add indexes</h2>
+<p>a. Remove node from replicaset</p>
+<pre class="lang:js decode:true">rs.remove("127.0.0.1"27102")</pre>
+<p>b. Stop server</p>
+<pre class="lang:default decode:true">&gt; mongo --port 27102
+use admin
+db.db.shutdownServer()</pre>
+<p>c. Modify config outside the replica set</p>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s2.conf">dbpath = /tmp/mongo/data2
+logpath = /tmp/mongo/log2.log
+# replSet = rs0
+port = 27102
+fork = true
+smallfiles = true
+</pre>
+<p>d. Start server</p>
+<pre class="lang:sh decode:true">&gt; mongod --config mongodb-rpl-s2.conf</pre>
+<p>e. Add index</p>
+<pre class="lang:js decode:true">use testdb
+db.test.ensureIndex({c:1})</pre>
+<p>f. Meanwhile on the primary some inserts happen</p>
+<pre class="lang:js decode:true">db.test.insert({a:4,b:4,c:4})
+db.test.insert({a:5,b:5,c:5})</pre>
+<h2>Step 3. Rebuild replica set</h2>
+<p>a. Stop separated slave</p>
+<pre class="lang:default decode:true">mongo --port 27102
+use admin
+db.db.shutdownServer()</pre>
+<p>b. Modify back the config</p>
+<pre class="toolbar:1 lang:default decode:true" title="mongodb-rpl-s2.conf">dbpath = /tmp/mongo/data2
+logpath = /tmp/mongo/log2.log
+replSet = rs0
+port = 27102
+fork = true
+smallfiles = true</pre>
+<p>c. Start server again</p>
+<pre class="lang:sh decode:true">&gt; mongod --config mongodb-rpl-s2.conf</pre>
+<p>d. Add back to replica set</p>
+<pre class="lang:js decode:true">&gt; mongo --port 27100
+rs.add({_id:2, host:"127.0.0.1:27102",priority:0})</pre>
+<p>e. Wait for synchronisation</p>
+<pre class="lang:js decode:true">&gt; mongo --port 27102
+use testdb
+db.test.find() // documents with a:1 and a:2 will be synced</pre>
+<p>f. Test queries on primary</p>
+<pre class="lang:js decode:true">mongo --port 27100
+db.test.find({a:1}).explain()
+{
+        "cursor" : "BtreeCursor a_1",
+        "indexBounds" : {"a" : [[1,1]]},
+        ...
+}
+db.test.find({c:1}).explain()    // NO INDEX ON c
+{
+        "cursor" : "BasicCursor",
+         ...
+}</pre>
+<p>g. Test queries on&nbsp;node 2</p>
+<pre class="lang:js decode:true">mongo --port 27102
+db.test.find({a:1}).explain()
+{
+        "cursor" : "BtreeCursor a_1",
+        "indexBounds" : {"a" : [[1,1]]},
+        ...
+}
+db.test.find({c:1}).explain()    // HAVE AN INDEX ON c
+{
+        "cursor" : "BtreeCursor c_1",
+        "indexBounds" : {"c" : [[1,1]]},
+        ...
+}</pre>
+<p>Didn&#8217;t have time for benchmarking, will do probably this in another post</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Job offer</title>
+		<link>/jobs/job-offer/</link>
+		
+		<dc:creator><![CDATA[Debugging Duck]]></dc:creator>
+		<pubDate>Tue, 11 Apr 2017 07:33:57 +0000</pubDate>
+				<category><![CDATA[jobs]]></category>
+		<category><![CDATA[duck]]></category>
+		<category><![CDATA[job]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=581</guid>
+
+					<description><![CDATA[I have this LinkedIn account for a while now.. I have around 2^7 connections and lots of Job Offers come in daily, but today I got the best since now! Here you have it: So I replied in plain English, &#8230; <a class="more" href="/jobs/job-offer/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>I have <a href="https://www.linkedin.com/in/ddbug/" target="_blank" rel="noopener noreferrer">this LinkedIn account</a> for a while now..<br />
+I have around 2^7 connections and lots of Job Offers come in daily,<br />
+but today I got the best since now!</p>
+<p>Here you have it:</p>
+<p><img class="wp-image-582" src="http://0v1.ro/xfiles/uploads/2017/04/mail_job.png" alt="Mac mac Maac !
+Mac,
+Mac mac mac...Mac-mac, Mac, Maac, Macc, mac ?
+Mac mac mac mac, mac mac Mac ^-^
+Mac mac,
+Maaaaaaac!
+Xyzxyz Abcabc Talent Acquisition Specialist@RINF Tech
+xyzxyz.abcabc@rinftech.com" width="469" /></p>
+<div style="clear: both"></div>
+<p>So I replied in plain English, because I also know that language (read my CV).<br />
+And thank her for the best Job offer <img src="https://s.w.org/images/core/emoji/13.1.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>&nbsp;<br />
+<strong>Update:</strong> I got a reply back!</p>
+<p><a href="http://0v1.ro/xfiles/uploads/2017/04/mail_back.png"><img loading="lazy" class="alignnone size-full wp-image-606" src="http://0v1.ro/xfiles/uploads/2017/04/mail_back.png" alt="" width="369" height="310" /></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Compare strings in PHP</title>
+		<link>/php/sadness/compare-strings-in-php/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Tue, 04 Apr 2017 07:43:30 +0000</pubDate>
+				<category><![CDATA[Sadness]]></category>
+		<category><![CDATA[madness]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[strings]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=569</guid>
+
+					<description><![CDATA[Just read a comment in the PHP documentation and had another PHP madness moment. It seems you have to be really, really careful when comparing strings that include numbers&#8230; &#160; Command \ PHP Version 7.0.0 &#8211; 7.1.3 5.4.4 &#8211; 5.6.30 &#8230; <a class="more" href="/php/sadness/compare-strings-in-php/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Just read a <a href="http://php.net/manual/en/language.operators.comparison.php#114682">comment</a> in the PHP documentation and had another PHP madness moment.</p>
+<p>It seems you have to be really, really careful when comparing strings that include numbers&#8230;</p>
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td width="800">Command \ PHP Version</td>
+<td width="75">7.0.0 &#8211; 7.1.3</td>
+<td width="83">5.4.4 &#8211; 5.6.30</td>
+<td width="76">5.2.1 &#8211; 5.4.3</td>
+</tr>
+<tr>
+<td>var_dump(&#8216;123&#8217; == &#8216;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 123&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;1e3&#8217; == &#8216;1000&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;+74951112233&#8217; == &#8216;74951112233&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;00000020&#8217; == &#8216;0000000000000000020&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0X1D&#8217; == &#8217;29E0&#8242;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xafebac&#8217; == &#8216;11529132&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xafebac&#8217; == &#8216;0XAFEBAC&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0xeb&#8217; == &#8216;+235e-0&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #ff0000;"><strong>FALSE</strong></span></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0.235&#8217; == &#8216;+.235&#8217;);</td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;0.2e-10&#8217; == &#8216;2.0E-11&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #339966;">TRUE</span></strong></td>
+</tr>
+<tr>
+<td>var_dump(&#8216;61529519452809720693702583126814&#8217; == &#8216;61529519452809720000000000000000&#8217;);</td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><strong><span style="color: #ff0000;">FALSE</span></strong></td>
+<td style="font-weight: 400;"><span style="color: #339966;"><strong>TRUE</strong></span></td>
+</tr>
+</tbody>
+</table>
+<p>https://3v4l.org/rop5S</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>PHP switch case after default works normally</title>
+		<link>/php/zce-training/php-basics/php-switch-case-after-default-works-normally/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Thu, 25 Feb 2016 13:54:32 +0000</pubDate>
+				<category><![CDATA[PHP Basics]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=485</guid>
+
+					<description><![CDATA[When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases. The documentation doesn&#8217;t specify this directly, but there is a note with an example. &#8230; <a class="more" href="/php/zce-training/php-basics/php-switch-case-after-default-works-normally/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases.<br />
+The documentation doesn&#8217;t specify this directly, but there is a note with an example.<br />
+Another thing worth mentioning is that switch does loose comparisons, so be careful about 0, false values</p>
+<pre class="lang:php decode:true">$a = 3;
+switch ($a) {
+    case 1: echo 'one'; break;
+    case 2: echo 'two'; break;
+    default: echo 'four'; break;
+    case 3: echo 'three'; break;
+}
+// outputs 'three'
+</pre>
+<p><a href="http://ideone.com/DQGUvU" target="_blank" rel="noopener noreferrer">Test yourself on iodine.com</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>How Tor works</title>
+		<link>/php/zce-training/security/how-tor-works/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2015 15:12:26 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=475</guid>
+
+					<description><![CDATA[Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS. The photo is provided by the EFF https://www.eff.org/pages/tor-and-https]]></description>
+										<content:encoded><![CDATA[<p>Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS.<br />
+The photo is provided by the EFF <a href="https://www.eff.org/pages/tor-and-https" target="_blank" rel="noopener noreferrer">https://www.eff.org/pages/tor-and-https</a></p>
+<p><img src="https://www.eff.org/files/tor-https-3.png" alt="" /></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Strings array access issue</title>
+		<link>/php/sadness/strings-array-access-issue/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Thu, 28 May 2015 14:28:06 +0000</pubDate>
+				<category><![CDATA[Sadness]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=466</guid>
+
+					<description><![CDATA[What would you expect for this script to output? error_reporting(E_ALL); ini_set('display_errors',1); $text = "abc"; var_dump(isset($text['key'])); var_dump((bool) $text['key']); Maybe a notice? maybe some false there.. But if you have in mind PHP logic.. you surely know.. So, $text is a string &#8230; <a class="more" href="/php/sadness/strings-array-access-issue/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>What would you expect for this script to output?</p>
+<pre class="lang:php decode:true">
+error_reporting(E_ALL); ini_set('display_errors',1);
+
+$text = "abc";
+
+var_dump(isset($text['key']));
+var_dump((bool) $text['key']);
+</pre>
+<p>Maybe a notice? maybe some false there..<br />
+But if you have in mind PHP logic.. you surely know..</p>
+<p>So, $text is a string and string characters can be accessed with $text[1] this is &#8220;b&#8221;<br />
+Then if you try $text[&#8216;key&#8217;] PHP will typecast your &#8216;key&#8217; to an integer (0) then $text[0] exists!</p>
+<p>The second step is simple.. $text[0] is &#8220;a&#8221; and PHP logic again &#8211; any non empty string is true!</p>
+<p>Output is:</p>
+<pre class="lang:php decode:true">
+bool(true);
+bool(true);
+</pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Foreach with reference</title>
+		<link>/php/sadness/foreach-with-reference/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Thu, 28 May 2015 13:17:07 +0000</pubDate>
+				<category><![CDATA[Sadness]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=454</guid>
+
+					<description><![CDATA[If you iterate over an array with &#038; you should unset the value variable after to not modify the array accidentally after. $array = array('a', 'b', 'c', 'd'); foreach($array as $key=>&#038;$value) { if ($key = 3) { // change d &#8230; <a class="more" href="/php/sadness/foreach-with-reference/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>If you iterate over an array with &#038; you should unset the value variable after to not modify the array accidentally after.</p>
+<pre class="lang:php decode:true">
+$array = array('a', 'b', 'c', 'd');
+
+foreach($array as $key=>&$value) {
+    if ($key = 3) {
+        // change d to x
+        $value = 'x';
+    }
+}
+// this will affect the $array to
+$value = 'z';
+// $array = array('a', 'b', 'c', 'z');
+</pre>
+<p>Should do like this</p>
+<pre class="lang:php decode:true">
+$array = array('a', 'b', 'c', 'd');
+
+foreach($array as $key=>&$value) {
+    if ($key = 3) {
+        // change d to x
+        $value = 'x';
+    }
+}
+unset($value);
+$value = 'z';  // if you do this accidentally you get a notice but no effect on the array
+// $array = array('a', 'b', 'c', 'x');
+</pre>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>PHP echo print question</title>
+		<link>/php/sadness/php-echo-print-question/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Tue, 19 May 2015 16:06:17 +0000</pubDate>
+				<category><![CDATA[Sadness]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=435</guid>
+
+					<description><![CDATA[Working with echo or print is very easy in PHP. At the begining it might be harder to understand concatenations or operations order, but after you master them is really easy. But there are some cases where you wonder how &#8230; <a class="more" href="/php/sadness/php-echo-print-question/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>Working with echo or print is very easy in PHP.<br />
+At the begining it might be harder to understand concatenations or operations order, but after you master them is really easy.<br />
+But there are some cases where you wonder how does this work ?!?!</p>
+<h2>What does this print?</h2>
+<pre class="lang:php decode:true">echo 1 . print(2+3) . 1+2;</pre>
+<p>Don&#8217;t rush to conclusions to fast.. Make sure you remember what echo and print do and what is the order of operations.</p>
+<p>Hint 1: print also returns after the opration is done<br />
+Hint 2: echo and print are language constructs, not functions.</p>
+<h2 style="cursor: pointer;" onClick="document.getElementById('echoPrintSolution').style.display = 'block'">Click here to see the solution</h2>
+<div id="echoPrintSolution" style="display: none;">
+<p>You might not know that print will be executed first, but if you do, that is not enough.<br />
+So, the order of operations is:<br />
+1. evaluate <span style="color: #ff0000;">2+3</span> = 5<br />
+2. evaluate <span style="color: #ff0000;">1+2</span> = 3<br />
+3. evaluate print arguments: <span style="color: #ff0000;">5 . 3</span> = 53 &#8211; don&#8217;t forget, print is not a function, is a language construct as echo!<br />
+4. will actually print <span style="color: #ff0000;">53</span> and return true<br />
+5. evaluate echo arguments: concatenation between <span style="color: #ff0000;">1</span> and <span style="color: #ff0000;">true</span> = 11<br />
+6. echoes <span style="color: #ff0000;">11</span></p>
+<p>So the result is: <span style="color: #ff0000;">5311</span>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>linux &#8211; ovi.ro</title>
+	<atom:link href="/tag/linux/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Fri, 11 Jul 2014 12:08:19 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Clear putty window fully</title>
+		<link>/snippets/clear-putty-window-fully/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 11 Jul 2014 12:08:19 +0000</pubDate>
+				<category><![CDATA[Snippets]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[putty]]></category>
+		<category><![CDATA[useful]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=384</guid>
+
+					<description><![CDATA[If you want to full clear putty window including the scroll history with just a command, here is your answer. It seems there is a way to clear the scroll buffer just by sending some special characters with print. [php toolbar=&#8221;false&#8221;]printf &#8216;\033[3J'[/php] &#8230; <a class="more" href="/snippets/clear-putty-window-fully/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<p>If you want to full clear putty window including the scroll history with just a command, here is your answer.<br />
+It seems there is a way to clear the scroll buffer just by sending some special characters with print.</p>
+<p>[php toolbar=&#8221;false&#8221;]printf &#8216;\033[3J'[/php]</p>
+<p>To make it easier, just put it in your .bash_profile as a new alias:</p>
+<p>[crayon toolbar=&#8221;false&#8221;]echo -e &#8220;\nalias cls=\&#8221;clear &#038;&#038; printf &#8216;\033[3J&#8217;\&#8221;\n&#8221; >> ~/.bashrc[/crayon]</p>
+<p>and then you can use cls to clear both screen and putty scroll buffer.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

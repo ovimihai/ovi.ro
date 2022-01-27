@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Machine Learning &#8211; ovi.ro</title>
+	<atom:link href="/tag/machine-learning/feed/" rel="self" type="application/rss+xml" />
+	<link>/</link>
+	<description>ovi.ro</description>
+	<lastBuildDate>Fri, 10 Aug 2018 07:47:06 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.9</generator>
+	<item>
+		<title>Google Colab &#8211; a free environment to run Machine Learning Python</title>
+		<link>/python/google-colab-a-free-environment-to-run-machine-learning-python/</link>
+		
+		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
+		<pubDate>Fri, 10 Aug 2018 07:47:06 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[Golab]]></category>
+		<category><![CDATA[Machine Learning]]></category>
+		<guid isPermaLink="false">http://0v1.ro/?p=637</guid>
+
+					<description><![CDATA[Google Colab is a great free environment for trying out python and Machine Learning tutorials &#8230; <a class="more" href="/python/google-colab-a-free-environment-to-run-machine-learning-python/">Read more &#187;</a>]]></description>
+										<content:encoded><![CDATA[<div class="topic-meta-data">&nbsp;</div>
+<div class="regular contents">
+<div class="cooked">
+<p>While working on a new project, I was told about Google Colab.<br />
+<a class="onebox" href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank" rel="nofollow noopener noreferrer">https://colab.research.google.com/notebooks/welcome.ipynb</a></p>
+<p>This is mainly a web interface to a Linux container where you have root access and by default you can run python code.<br />
+You can even use Machine Learning libraries and run the code on a GPU.<br />
+You have bash commands and root access on the container, so you pretty much can do everything you want, but you are limited to some CPU and RAM. I handled at some point a 5GB file and tried some clustering on that data but failed&nbsp;<img class="emoji" title=":slight_smile:" src="https://discourse.emag.network/images/emoji/emoji_one/slight_smile.png?v=3" alt=":slight_smile:">&nbsp;I managed to make it work after reducing some dimensions.</p>
+<p>There are a lot of useful notebooks with examples that you can open by default and you can use your other Google Resources like Drive, Cloud Storage, BigQuery, upload &#8211; download files, wget stuff from the internet, even crawl&nbsp;<img class="emoji" title=":slight_smile:" src="https://discourse.emag.network/images/emoji/emoji_one/slight_smile.png?v=3" alt=":slight_smile:"></p>
+<ul>
+<li><a href="https://colab.research.google.com/notebooks/io.ipynb">https://colab.research.google.com/notebooks/io.ipynb</a></li>
+<li><a href="https://colab.research.google.com/notebooks/bigquery.ipynb">https://colab.research.google.com/notebooks/bigquery.ipynb</a></li>
+<li><a href="https://colab.research.google.com/notebooks/bigquery.ipynb">https://colab.research.google.com/notebooks/snippets/importing_libraries.ipynb</a></li>
+<li><a href="https://colab.research.google.com/notebooks/markdown_guide.ipynb">https://colab.research.google.com/notebooks/markdown_guide.ipynb</a></li>
+</ul>
+<p>Try it out! You only need a Google account and maybe Chrome (on Firefox, Safari and Opera I had some small issues)</p>
+</div>
+</div>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
