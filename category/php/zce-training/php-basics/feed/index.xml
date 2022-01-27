@@ -26,7 +26,7 @@
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 25 Feb 2016 13:54:32 +0000</pubDate>
 				<category><![CDATA[PHP Basics]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=485</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=485</guid>
 
 					<description><![CDATA[When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases. The documentation doesn&#8217;t specify this directly, but there is a note with an example. &#8230; <a class="more" href="/php/zce-training/php-basics/php-switch-case-after-default-works-normally/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases.<br />
@@ -63,7 +63,7 @@ switch ($a) {
 		<category><![CDATA[superglobal]]></category>
 		<category><![CDATA[variable variables]]></category>
 		<category><![CDATA[variables]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=280</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=280</guid>
 
 					<description><![CDATA[Variables are preceded in PHP by a dollar sign $ and the rules for naming are: [a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here &#8230; <a class="more" href="/php/variables/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Variables are preceded in PHP by a dollar sign $ and the rules for naming are: <strong><em>[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*</em></strong><em>   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here can include extended <a title="ASCII TABLE" href="http://www.ascii-code.com/" target="_blank" rel="noopener noreferrer">ascii</a> characters from 7F to FF (127 &#8211; 255) so don&#8217;t blame me if you find letters like ç, † or ½</em></p>
@@ -191,7 +191,7 @@ echo $var; // echoes 3</pre>
 		<category><![CDATA[operators]]></category>
 		<category><![CDATA[order]]></category>
 		<category><![CDATA[precedence]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=161</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=161</guid>
 
 					<description><![CDATA[PHP Operators precedence and exceptions &#8230; <a class="more" href="/php/zce-training/php-basics/operators/operator-precedence/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Like in math: 3 + 4 * 5 = 23 and not 35, in PHP you have an order for interpreting the code.</p>
@@ -338,7 +338,7 @@ PHP also knows about <strong>Asociativity</strong>.</p>
 		<category><![CDATA[bitwise]]></category>
 		<category><![CDATA[operators]]></category>
 		<category><![CDATA[reference]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=185</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=185</guid>
 
 					<description><![CDATA[PHP operators: arithmetic, assignment, reference, bitwise. &#8230; <a class="more" href="/php/operators-list/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<h3>Arithmetic Operators</h3>
@@ -468,7 +468,7 @@ PHP also knows about <strong>Asociativity</strong>.</p>
 		<category><![CDATA[php]]></category>
 		<category><![CDATA[syntax]]></category>
 		<category><![CDATA[tags]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=120</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=120</guid>
 
 					<description><![CDATA[Basic PHP syntax, all about closing tags abd php blocks, exceptions, best practice and some details about comments. &#8230; <a class="more" href="/php/syntax/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<h3><!--:en-->PHP tags</h3>

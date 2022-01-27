@@ -29,7 +29,7 @@
 		<category><![CDATA[operators]]></category>
 		<category><![CDATA[order]]></category>
 		<category><![CDATA[precedence]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=161</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=161</guid>
 
 					<description><![CDATA[PHP Operators precedence and exceptions &#8230; <a class="more" href="/php/zce-training/php-basics/operators/operator-precedence/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Like in math: 3 + 4 * 5 = 23 and not 35, in PHP you have an order for interpreting the code.</p>
@@ -176,7 +176,7 @@ PHP also knows about <strong>Asociativity</strong>.</p>
 		<category><![CDATA[bitwise]]></category>
 		<category><![CDATA[operators]]></category>
 		<category><![CDATA[reference]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=185</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=185</guid>
 
 					<description><![CDATA[PHP operators: arithmetic, assignment, reference, bitwise. &#8230; <a class="more" href="/php/operators-list/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<h3>Arithmetic Operators</h3>

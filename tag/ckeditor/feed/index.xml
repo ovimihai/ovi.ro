@@ -30,7 +30,7 @@
 		<category><![CDATA[CKEditor]]></category>
 		<category><![CDATA[language error]]></category>
 		<category><![CDATA[m.lang.contextmenu]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=257</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=257</guid>
 
 					<description><![CDATA[How to solve CKEditor language error: "m.lang.contextmenu is undefined" by declaring the language code in the config file &#8230; <a class="more" href="/issues/m-lang-contextmenu-is-undefined-error-message/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>I got this error while developing a website. It was odd the problema was not already reported, but that was because of the diferent language of the visitors.</p>

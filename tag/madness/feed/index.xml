@@ -29,7 +29,7 @@
 		<category><![CDATA[madness]]></category>
 		<category><![CDATA[php]]></category>
 		<category><![CDATA[strings]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=569</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=569</guid>
 
 					<description><![CDATA[Just read a comment in the PHP documentation and had another PHP madness moment. It seems you have to be really, really careful when comparing strings that include numbers&#8230; &#160; Command \ PHP Version 7.0.0 &#8211; 7.1.3 5.4.4 &#8211; 5.6.30 &#8230; <a class="more" href="/php/sadness/compare-strings-in-php/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Just read a <a href="http://php.net/manual/en/language.operators.comparison.php#114682">comment</a> in the PHP documentation and had another PHP madness moment.</p>

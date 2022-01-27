@@ -35,7 +35,7 @@
 		<category><![CDATA[superglobal]]></category>
 		<category><![CDATA[variable variables]]></category>
 		<category><![CDATA[variables]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=280</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=280</guid>
 
 					<description><![CDATA[Variables are preceded in PHP by a dollar sign $ and the rules for naming are: [a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here &#8230; <a class="more" href="/php/variables/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Variables are preceded in PHP by a dollar sign $ and the rules for naming are: <strong><em>[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*</em></strong><em>   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here can include extended <a title="ASCII TABLE" href="http://www.ascii-code.com/" target="_blank" rel="noopener noreferrer">ascii</a> characters from 7F to FF (127 &#8211; 255) so don&#8217;t blame me if you find letters like ç, † or ½</em></p>

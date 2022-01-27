@@ -26,7 +26,7 @@
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Fri, 26 May 2017 12:09:28 +0000</pubDate>
 				<category><![CDATA[MongoDB]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=615</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=615</guid>
 
 					<description><![CDATA[I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0. Using this feature you can do reports&#160;better on a &#8230; <a class="more" href="/mongodb/mongodb-more-indexes-on-secondaries/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0.</p>
@@ -165,7 +165,7 @@ db.test.find({c:1}).explain()    // HAVE AN INDEX ON c
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Mon, 26 May 2014 20:08:51 +0000</pubDate>
 				<category><![CDATA[M101JS]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=365</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=365</guid>
 
 					<description><![CDATA[Mongo University has a collection of great MongoDB courses that help developers into first steps and further understanding MongoDB and NoSQL concepts. Here you have the list of videos from the course. If you didn&#8217;t register to the course you &#8230; <a class="more" href="/mongodb/m101js/m101js-videos/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Mongo University has a collection of great MongoDB courses that help developers into first steps and further understanding MongoDB and NoSQL concepts.</p>
@@ -265,7 +265,7 @@ If you like the videos you can register for the courses for free and if you do a
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Wed, 22 May 2013 19:45:05 +0000</pubDate>
 				<category><![CDATA[MongoDB]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=324</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=324</guid>
 
 					<description><![CDATA[MongoBD basic operations to create, read, update and delete data. A quick overview on this topic and links for more details. &#8230; <a class="more" href="/mongodb/mongodb-crud-operations/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>MongoDB is a NoSQL database and supports all the classic CRUD ( Create, Read, Update, Delete ) operations.</p>
@@ -301,7 +301,7 @@ db.colectionName   // point to a colection in the selected database</pre>
 		<category><![CDATA[MongoDB]]></category>
 		<category><![CDATA[cheatsheet]]></category>
 		<category><![CDATA[NoSQL]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=316</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=316</guid>
 
 					<description><![CDATA[MongoDB Cheat Sheet with most basic operations you'll need to do. It's work in progress so you might find more in the near future. &#8230; <a class="more" href="/cheatsheets/mongodb-cheatsheet/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>MongoDB is one of the best NoSQL databases out there. NoSQL might seem odd at first glance and may be hard to pass from relational to non-relational databases but in time you begin to see the advantages.</p>

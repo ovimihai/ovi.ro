@@ -28,7 +28,7 @@
 				<category><![CDATA[Python]]></category>
 		<category><![CDATA[Golab]]></category>
 		<category><![CDATA[Machine Learning]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=637</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=637</guid>
 
 					<description><![CDATA[Google Colab is a great free environment for trying out python and Machine Learning tutorials &#8230; <a class="more" href="/python/google-colab-a-free-environment-to-run-machine-learning-python/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<div class="topic-meta-data">&nbsp;</div>
@@ -61,11 +61,11 @@ You have bash commands and root access on the container, so you pretty much can 
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 05 Oct 2017 13:36:36 +0000</pubDate>
 				<category><![CDATA[jobs]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=630</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=630</guid>
 
 					<description><![CDATA[Still getting added on LinkedIn, and lots of offers]]></description>
 										<content:encoded><![CDATA[<p>Still getting added on LinkedIn, and lots of offers<br />
-<a href="http://0v1.ro/xfiles/uploads/2017/10/rubber_duck2.png"><img loading="lazy" class="alignnone wp-image-631 size-full" src="http://0v1.ro/xfiles/uploads/2017/10/rubber_duck2.png" alt="" width="912" height="509"></a></p>
+<a href="http://ovi.ro/xfiles/uploads/2017/10/rubber_duck2.png"><img loading="lazy" class="alignnone wp-image-631 size-full" src="http://ovi.ro/xfiles/uploads/2017/10/rubber_duck2.png" alt="" width="912" height="509"></a></p>
 ]]></content:encoded>
 					
 		
@@ -78,7 +78,7 @@ You have bash commands and root access on the container, so you pretty much can 
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Fri, 26 May 2017 12:09:28 +0000</pubDate>
 				<category><![CDATA[MongoDB]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=615</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=615</guid>
 
 					<description><![CDATA[I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0. Using this feature you can do reports&#160;better on a &#8230; <a class="more" href="/mongodb/mongodb-more-indexes-on-secondaries/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>I&#8217;ve been wondering for a time if it works, the documentation is not really clear if you can have different indexes on a replicaset secondary, maybe delayed or with priority 0.</p>
@@ -220,7 +220,7 @@ db.test.find({c:1}).explain()    // HAVE AN INDEX ON c
 		<category><![CDATA[madness]]></category>
 		<category><![CDATA[php]]></category>
 		<category><![CDATA[strings]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=569</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=569</guid>
 
 					<description><![CDATA[Just read a comment in the PHP documentation and had another PHP madness moment. It seems you have to be really, really careful when comparing strings that include numbers&#8230; &#160; Command \ PHP Version 7.0.0 &#8211; 7.1.3 5.4.4 &#8211; 5.6.30 &#8230; <a class="more" href="/php/sadness/compare-strings-in-php/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Just read a <a href="http://php.net/manual/en/language.operators.comparison.php#114682">comment</a> in the PHP documentation and had another PHP madness moment.</p>
@@ -315,7 +315,7 @@ db.test.find({c:1}).explain()    // HAVE AN INDEX ON c
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 25 Feb 2016 13:54:32 +0000</pubDate>
 				<category><![CDATA[PHP Basics]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=485</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=485</guid>
 
 					<description><![CDATA[When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases. The documentation doesn&#8217;t specify this directly, but there is a note with an example. &#8230; <a class="more" href="/php/zce-training/php-basics/php-switch-case-after-default-works-normally/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases.<br />
@@ -343,7 +343,7 @@ switch ($a) {
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Fri, 04 Sep 2015 15:12:26 +0000</pubDate>
 				<category><![CDATA[Security]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=475</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=475</guid>
 
 					<description><![CDATA[Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS. The photo is provided by the EFF https://www.eff.org/pages/tor-and-https]]></description>
 										<content:encoded><![CDATA[<p>Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS.<br />
@@ -361,7 +361,7 @@ The photo is provided by the EFF <a href="https://www.eff.org/pages/tor-and-http
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 28 May 2015 14:28:06 +0000</pubDate>
 				<category><![CDATA[Sadness]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=466</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=466</guid>
 
 					<description><![CDATA[What would you expect for this script to output? error_reporting(E_ALL); ini_set('display_errors',1); $text = "abc"; var_dump(isset($text['key'])); var_dump((bool) $text['key']); Maybe a notice? maybe some false there.. But if you have in mind PHP logic.. you surely know.. So, $text is a string &#8230; <a class="more" href="/php/sadness/strings-array-access-issue/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>What would you expect for this script to output?</p>
@@ -395,7 +395,7 @@ bool(true);
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 28 May 2015 13:17:07 +0000</pubDate>
 				<category><![CDATA[Sadness]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=454</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=454</guid>
 
 					<description><![CDATA[If you iterate over an array with &#038; you should unset the value variable after to not modify the array accidentally after. $array = array('a', 'b', 'c', 'd'); foreach($array as $key=>&#038;$value) { if ($key = 3) { // change d &#8230; <a class="more" href="/php/sadness/foreach-with-reference/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>If you iterate over an array with &#038; you should unset the value variable after to not modify the array accidentally after.</p>
@@ -438,7 +438,7 @@ $value = 'z';  // if you do this accidentally you get a notice but no effect on 
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Tue, 19 May 2015 16:06:17 +0000</pubDate>
 				<category><![CDATA[Sadness]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=435</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=435</guid>
 
 					<description><![CDATA[Working with echo or print is very easy in PHP. At the begining it might be harder to understand concatenations or operations order, but after you master them is really easy. But there are some cases where you wonder how &#8230; <a class="more" href="/php/sadness/php-echo-print-question/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Working with echo or print is very easy in PHP.<br />
@@ -473,7 +473,7 @@ So, the order of operations is:<br />
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Tue, 19 May 2015 13:06:35 +0000</pubDate>
 				<category><![CDATA[Snippets]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=430</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=430</guid>
 
 					<description><![CDATA[# file path export FILE=file/path # line number export LINE=10 git log &#8211;format=format:%H $FILE &#124; xargs -L 1 git blame $FILE -L $LINE,$LINE &#124; uniq -c]]></description>
 										<content:encoded><![CDATA[<p># file path<br />

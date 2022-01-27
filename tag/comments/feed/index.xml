@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>Redirecting...</title>
-		<meta http-equiv="refresh" content="0;url=httpsovi.ro/tag/feed/">
+		<meta http-equiv="refresh" content="0;url=/tag/feed/">
 	</head>
 	<body>
 		<script type="text/javascript">
-			window.location = "httpsovi.ro/tag/feed/";
+			window.location = "/tag/feed/";
 		</script>
 
-		<p>You are being redirected to <a href="httpsovi.ro/tag/feed/">httpsovi.ro/tag/feed/</a></p>
+		<p>You are being redirected to <a href="/tag/feed/">/tag/feed/</a></p>
 	</body>
 </html>

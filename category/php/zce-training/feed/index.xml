@@ -26,7 +26,7 @@
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 25 Feb 2016 13:54:32 +0000</pubDate>
 				<category><![CDATA[PHP Basics]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=485</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=485</guid>
 
 					<description><![CDATA[When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases. The documentation doesn&#8217;t specify this directly, but there is a note with an example. &#8230; <a class="more" href="/php/zce-training/php-basics/php-switch-case-after-default-works-normally/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases.<br />
@@ -54,7 +54,7 @@ switch ($a) {
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Fri, 04 Sep 2015 15:12:26 +0000</pubDate>
 				<category><![CDATA[Security]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=475</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=475</guid>
 
 					<description><![CDATA[Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS. The photo is provided by the EFF https://www.eff.org/pages/tor-and-https]]></description>
 										<content:encoded><![CDATA[<p>Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS.<br />
@@ -72,7 +72,7 @@ The photo is provided by the EFF <a href="https://www.eff.org/pages/tor-and-http
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Sat, 25 Apr 2015 09:19:27 +0000</pubDate>
 				<category><![CDATA[Strings & Patterns]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=421</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=421</guid>
 
 					<description><![CDATA[Documentation Cheatsheet: Dave Child, Dzone, RegexOne Tools: (Online) RegExr, Regex101, RagexPal, RegexPlanet, (Offline) Rad Software (free) or RegexBuddy (paid)]]></description>
 										<content:encoded><![CDATA[<p><a href="http://www.regular-expressions.info/" target="new" rel="noopener noreferrer">Documentation</a><br />
@@ -90,7 +90,7 @@ Tools: (Online) <a href="http://www.regexr.com/" target="new" rel="noopener nore
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Sat, 25 Apr 2015 08:39:09 +0000</pubDate>
 				<category><![CDATA[ZCE Training]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=403</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=403</guid>
 
 					<description><![CDATA[In a competitive environment as the programming world is this kind of certification can help you differentiate yourself when you are looking for a job. You might want a bigger salary, you want to improve your CV, the certification is &#8230; <a class="more" href="/php/zce-training/zend-certified-php-engineer-exam/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>In a competitive environment as the programming world is this kind of certification can help you differentiate yourself when you are looking for a job. You might want a bigger salary, you want to improve your CV, the certification is clearly a big advantage.<br />
@@ -117,7 +117,7 @@ If you take the exam you will get a place in the <a href="http://www.zend.com/st
 <p>After the exam you get immediately the pass/fail status and they give you a sheet with feedback on each topic you need to study more just if you fail.</p>
 <p>You have a lot of online resources, but first on the list is always the <a href="http://php.net/" target="new" rel="noopener noreferrer">PHP Manual</a>!</p>
 <p>Check out this list of topics from <a href="https://bitly.com/bundles/lornajane/3" target="new" rel="noopener noreferrer">Lorna Mitchel</a> and if you want to invest in your training, the <a href="http://www.ucertify.com/?func=load_course&amp;course=200-550" target="new" rel="noopener noreferrer">uCertify 200-550 training</a> is great!<br />
-I have <a href="http://0v1.ro/php/zce/">another article</a> with the full topics and some articles about each other<br />
+I have <a href="http://ovi.ro/php/zce/">another article</a> with the full topics and some articles about each other<br />
 Other unrated sources: <a href="http://www.slideshare.net/luckysher007/php-5-3studyguidev1a" target="new" rel="noopener noreferrer">Study guide</a>, <a href="http://www.slideshare.net/lornajane/zend-certification-preparation-tutorial" target="new" rel="noopener noreferrer">Lorna Mitchell presentation</a><br />
 Good luck!</p>
 ]]></content:encoded>
@@ -141,7 +141,7 @@ Good luck!</p>
 		<category><![CDATA[superglobal]]></category>
 		<category><![CDATA[variable variables]]></category>
 		<category><![CDATA[variables]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=280</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=280</guid>
 
 					<description><![CDATA[Variables are preceded in PHP by a dollar sign $ and the rules for naming are: [a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here &#8230; <a class="more" href="/php/variables/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Variables are preceded in PHP by a dollar sign $ and the rules for naming are: <strong><em>[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*</em></strong><em>   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here can include extended <a title="ASCII TABLE" href="http://www.ascii-code.com/" target="_blank" rel="noopener noreferrer">ascii</a> characters from 7F to FF (127 &#8211; 255) so don&#8217;t blame me if you find letters like ç, † or ½</em></p>
@@ -269,7 +269,7 @@ echo $var; // echoes 3</pre>
 		<category><![CDATA[operators]]></category>
 		<category><![CDATA[order]]></category>
 		<category><![CDATA[precedence]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=161</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=161</guid>
 
 					<description><![CDATA[PHP Operators precedence and exceptions &#8230; <a class="more" href="/php/zce-training/php-basics/operators/operator-precedence/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Like in math: 3 + 4 * 5 = 23 and not 35, in PHP you have an order for interpreting the code.</p>
@@ -416,7 +416,7 @@ PHP also knows about <strong>Asociativity</strong>.</p>
 		<category><![CDATA[bitwise]]></category>
 		<category><![CDATA[operators]]></category>
 		<category><![CDATA[reference]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=185</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=185</guid>
 
 					<description><![CDATA[PHP operators: arithmetic, assignment, reference, bitwise. &#8230; <a class="more" href="/php/operators-list/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<h3>Arithmetic Operators</h3>
@@ -545,7 +545,7 @@ PHP also knows about <strong>Asociativity</strong>.</p>
 		<category><![CDATA[exam]]></category>
 		<category><![CDATA[topics]]></category>
 		<category><![CDATA[zce]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=203</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=203</guid>
 
 					<description><![CDATA[ZCE all usefull details about the exam and the topics summary you sould study &#8230; <a class="more" href="/php/zce/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Zend PHP 5.3 Certification Exam is a measure of technical distinction that employers use to evaluate prospective employees.</p>
@@ -557,15 +557,15 @@ PHP also knows about <strong>Asociativity</strong>.</p>
 <table width="100%" border="0">
 <tbody>
 <tr>
-<th width="33%"><a title="PHP Basics Category" href="http://0v1.ro/category/php/zce-training/php-basics/">PHP Basics</a></th>
+<th width="33%"><a title="PHP Basics Category" href="http://ovi.ro/category/php/zce-training/php-basics/">PHP Basics</a></th>
 <th width="33%">Functions</th>
 <th width="34%">Data Format &amp; Types</th>
 </tr>
 <tr>
 <td>
 <ul>
-<li><a title="Php basic syntax" href="http://0v1.ro/php/syntax/">Syntax</a></li>
-<li><a title="Php operators Category" href="http://0v1.ro/category/php/zce-training/php-basics/operators/">Operators</a></li>
+<li><a title="Php basic syntax" href="http://ovi.ro/php/syntax/">Syntax</a></li>
+<li><a title="Php operators Category" href="http://ovi.ro/category/php/zce-training/php-basics/operators/">Operators</a></li>
 <li><a href="/php/variables/">Variables</a></li>
 <li>Constants</li>
 <li>Control Structures</li>
@@ -722,7 +722,7 @@ PHP also knows about <strong>Asociativity</strong>.</p>
 </tbody>
 </table>
 <p>&nbsp;<br />
-Another article with more details <a href="http://0v1.ro/uncategorized/zend-certified-php-engineer-exam/">here</a>.</p>
+Another article with more details <a href="http://ovi.ro/uncategorized/zend-certified-php-engineer-exam/">here</a>.</p>
 ]]></content:encoded>
 					
 		
@@ -741,7 +741,7 @@ Another article with more details <a href="http://0v1.ro/uncategorized/zend-cert
 		<category><![CDATA[php]]></category>
 		<category><![CDATA[syntax]]></category>
 		<category><![CDATA[tags]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=120</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=120</guid>
 
 					<description><![CDATA[Basic PHP syntax, all about closing tags abd php blocks, exceptions, best practice and some details about comments. &#8230; <a class="more" href="/php/syntax/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<h3><!--:en-->PHP tags</h3>

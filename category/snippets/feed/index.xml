@@ -26,7 +26,7 @@
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Tue, 19 May 2015 13:06:35 +0000</pubDate>
 				<category><![CDATA[Snippets]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=430</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=430</guid>
 
 					<description><![CDATA[# file path export FILE=file/path # line number export LINE=10 git log &#8211;format=format:%H $FILE &#124; xargs -L 1 git blame $FILE -L $LINE,$LINE &#124; uniq -c]]></description>
 										<content:encoded><![CDATA[<p># file path<br />
@@ -49,7 +49,7 @@ git log &#8211;format=format:%H $FILE | xargs -L 1 git blame $FILE -L $LINE,$LIN
 		<category><![CDATA[linux]]></category>
 		<category><![CDATA[putty]]></category>
 		<category><![CDATA[useful]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=384</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=384</guid>
 
 					<description><![CDATA[If you want to full clear putty window including the scroll history with just a command, here is your answer. It seems there is a way to clear the scroll buffer just by sending some special characters with print. [php toolbar=&#8221;false&#8221;]printf &#8216;\033[3J'[/php] &#8230; <a class="more" href="/snippets/clear-putty-window-fully/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>If you want to full clear putty window including the scroll history with just a command, here is your answer.<br />

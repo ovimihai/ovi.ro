@@ -29,7 +29,7 @@
 		<category><![CDATA[madness]]></category>
 		<category><![CDATA[php]]></category>
 		<category><![CDATA[strings]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=569</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=569</guid>
 
 					<description><![CDATA[Just read a comment in the PHP documentation and had another PHP madness moment. It seems you have to be really, really careful when comparing strings that include numbers&#8230; &#160; Command \ PHP Version 7.0.0 &#8211; 7.1.3 5.4.4 &#8211; 5.6.30 &#8230; <a class="more" href="/php/sadness/compare-strings-in-php/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Just read a <a href="http://php.net/manual/en/language.operators.comparison.php#114682">comment</a> in the PHP documentation and had another PHP madness moment.</p>
@@ -124,7 +124,7 @@
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 25 Feb 2016 13:54:32 +0000</pubDate>
 				<category><![CDATA[PHP Basics]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=485</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=485</guid>
 
 					<description><![CDATA[When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases. The documentation doesn&#8217;t specify this directly, but there is a note with an example. &#8230; <a class="more" href="/php/zce-training/php-basics/php-switch-case-after-default-works-normally/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>When you put the a case block after the default block the switch will work normally and fallback to the default only after testing all cases.<br />
@@ -152,7 +152,7 @@ switch ($a) {
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Fri, 04 Sep 2015 15:12:26 +0000</pubDate>
 				<category><![CDATA[Security]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=475</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=475</guid>
 
 					<description><![CDATA[Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS. The photo is provided by the EFF https://www.eff.org/pages/tor-and-https]]></description>
 										<content:encoded><![CDATA[<p>Great photos explaining what is disclosed at each point when doing a request on the web, with or without Tor or HTTPS.<br />
@@ -170,7 +170,7 @@ The photo is provided by the EFF <a href="https://www.eff.org/pages/tor-and-http
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 28 May 2015 14:28:06 +0000</pubDate>
 				<category><![CDATA[Sadness]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=466</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=466</guid>
 
 					<description><![CDATA[What would you expect for this script to output? error_reporting(E_ALL); ini_set('display_errors',1); $text = "abc"; var_dump(isset($text['key'])); var_dump((bool) $text['key']); Maybe a notice? maybe some false there.. But if you have in mind PHP logic.. you surely know.. So, $text is a string &#8230; <a class="more" href="/php/sadness/strings-array-access-issue/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>What would you expect for this script to output?</p>
@@ -204,7 +204,7 @@ bool(true);
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Thu, 28 May 2015 13:17:07 +0000</pubDate>
 				<category><![CDATA[Sadness]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=454</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=454</guid>
 
 					<description><![CDATA[If you iterate over an array with &#038; you should unset the value variable after to not modify the array accidentally after. $array = array('a', 'b', 'c', 'd'); foreach($array as $key=>&#038;$value) { if ($key = 3) { // change d &#8230; <a class="more" href="/php/sadness/foreach-with-reference/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>If you iterate over an array with &#038; you should unset the value variable after to not modify the array accidentally after.</p>
@@ -247,7 +247,7 @@ $value = 'z';  // if you do this accidentally you get a notice but no effect on 
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Tue, 19 May 2015 16:06:17 +0000</pubDate>
 				<category><![CDATA[Sadness]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=435</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=435</guid>
 
 					<description><![CDATA[Working with echo or print is very easy in PHP. At the begining it might be harder to understand concatenations or operations order, but after you master them is really easy. But there are some cases where you wonder how &#8230; <a class="more" href="/php/sadness/php-echo-print-question/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Working with echo or print is very easy in PHP.<br />
@@ -282,7 +282,7 @@ So, the order of operations is:<br />
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Sat, 25 Apr 2015 09:19:27 +0000</pubDate>
 				<category><![CDATA[Strings & Patterns]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=421</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=421</guid>
 
 					<description><![CDATA[Documentation Cheatsheet: Dave Child, Dzone, RegexOne Tools: (Online) RegExr, Regex101, RagexPal, RegexPlanet, (Offline) Rad Software (free) or RegexBuddy (paid)]]></description>
 										<content:encoded><![CDATA[<p><a href="http://www.regular-expressions.info/" target="new" rel="noopener noreferrer">Documentation</a><br />
@@ -300,7 +300,7 @@ Tools: (Online) <a href="http://www.regexr.com/" target="new" rel="noopener nore
 		<dc:creator><![CDATA[Ovidiu Anicai]]></dc:creator>
 		<pubDate>Sat, 25 Apr 2015 08:39:09 +0000</pubDate>
 				<category><![CDATA[ZCE Training]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=403</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=403</guid>
 
 					<description><![CDATA[In a competitive environment as the programming world is this kind of certification can help you differentiate yourself when you are looking for a job. You might want a bigger salary, you want to improve your CV, the certification is &#8230; <a class="more" href="/php/zce-training/zend-certified-php-engineer-exam/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>In a competitive environment as the programming world is this kind of certification can help you differentiate yourself when you are looking for a job. You might want a bigger salary, you want to improve your CV, the certification is clearly a big advantage.<br />
@@ -327,7 +327,7 @@ If you take the exam you will get a place in the <a href="http://www.zend.com/st
 <p>After the exam you get immediately the pass/fail status and they give you a sheet with feedback on each topic you need to study more just if you fail.</p>
 <p>You have a lot of online resources, but first on the list is always the <a href="http://php.net/" target="new" rel="noopener noreferrer">PHP Manual</a>!</p>
 <p>Check out this list of topics from <a href="https://bitly.com/bundles/lornajane/3" target="new" rel="noopener noreferrer">Lorna Mitchel</a> and if you want to invest in your training, the <a href="http://www.ucertify.com/?func=load_course&amp;course=200-550" target="new" rel="noopener noreferrer">uCertify 200-550 training</a> is great!<br />
-I have <a href="http://0v1.ro/php/zce/">another article</a> with the full topics and some articles about each other<br />
+I have <a href="http://ovi.ro/php/zce/">another article</a> with the full topics and some articles about each other<br />
 Other unrated sources: <a href="http://www.slideshare.net/luckysher007/php-5-3studyguidev1a" target="new" rel="noopener noreferrer">Study guide</a>, <a href="http://www.slideshare.net/lornajane/zend-certification-preparation-tutorial" target="new" rel="noopener noreferrer">Lorna Mitchell presentation</a><br />
 Good luck!</p>
 ]]></content:encoded>
@@ -351,7 +351,7 @@ Good luck!</p>
 		<category><![CDATA[superglobal]]></category>
 		<category><![CDATA[variable variables]]></category>
 		<category><![CDATA[variables]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=280</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=280</guid>
 
 					<description><![CDATA[Variables are preceded in PHP by a dollar sign $ and the rules for naming are: [a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here &#8230; <a class="more" href="/php/variables/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Variables are preceded in PHP by a dollar sign $ and the rules for naming are: <strong><em>[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*</em></strong><em>   or in plain english names of variables can begin with letters or underscores and then you can put other numbers letters and underscores. Letters here can include extended <a title="ASCII TABLE" href="http://www.ascii-code.com/" target="_blank" rel="noopener noreferrer">ascii</a> characters from 7F to FF (127 &#8211; 255) so don&#8217;t blame me if you find letters like ç, † or ½</em></p>
@@ -479,7 +479,7 @@ echo $var; // echoes 3</pre>
 		<category><![CDATA[operators]]></category>
 		<category><![CDATA[order]]></category>
 		<category><![CDATA[precedence]]></category>
-		<guid isPermaLink="false">http://0v1.ro/?p=161</guid>
+		<guid isPermaLink="false">http://ovi.ro/?p=161</guid>
 
 					<description><![CDATA[PHP Operators precedence and exceptions &#8230; <a class="more" href="/php/zce-training/php-basics/operators/operator-precedence/">Read more &#187;</a>]]></description>
 										<content:encoded><![CDATA[<p>Like in math: 3 + 4 * 5 = 23 and not 35, in PHP you have an order for interpreting the code.</p>
