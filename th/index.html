@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>TH</title>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+            });
+
+            document.getElementsByTagName('h1')[0].innerText = params.q
+
+        }, false);
+    </script>
+  </head>
+  <body>
+    <h1>000</h1>
+  </body>
+</html>
