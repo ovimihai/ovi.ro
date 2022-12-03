@@ -4,6 +4,7 @@
     <style>
       div {
         font-size: 50vw;
+        text-align: center;
       }
     </style>
     <script type="text/javascript">
@@ -11,13 +12,15 @@
             const params = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
             });
-
-            document.getElementsByTagName('div')[0].innerText = params.q
+            var text = params.q;
+            var elem = document.querySelector('#text');
+            elem.innerText = text;
+            elem.style.fontSize = ((100 / text.length) * 2).toString()  + "vw";
 
         }, false);
     </script>
   </head>
   <body>
-    <div>000</div>
+    <div id="text">000</div>
   </body>
 </html>
