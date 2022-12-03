@@ -3,12 +3,7 @@
     <title>TH</title>
     <style>
       div {
-        text-align: justify;
-      }
-      div:after {
-        content: "";
-        display: inline-block;
-        width: 100%;
+        font-size: 50vw;
       }
     </style>
     <script type="text/javascript">
@@ -17,7 +12,7 @@
             get: (searchParams, prop) => searchParams.get(prop),
             });
 
-            document.getElementsByTagName('h1')[0].innerText = params.q
+            document.getElementsByTagName('div')[0].innerText = params.q
 
         }, false);
     </script>
