@@ -2,6 +2,12 @@
   <head>
     <title>Rubik's cube</title>
   </head>
+  <style>
+    .rubik_code {
+      font-weight: bold;
+      font-family: monospace;
+    }
+  </style>
   <body>
     <h1>Solve Rubik's cube</h1>
     <h2>Solve 3x3x3 cube</h2>
@@ -13,12 +19,37 @@
     Parities:<br />
     <ul>
         <li>
-            Flip top side center<br />
-            OLL Parity ► <pre>r U2 x r U2 r U2 r' U2 l U2 r' U2 r U2 r' U2 r' </pre>
+            <a href="https://www.speedcube.com.au/blogs/speedcubing-solutions/4x4-oll-parity-algorithms">OLL Parity</a>
+              <ul>
+                <li>
+                  Flip top side margin<br />
+                  <span class="rubik_code">r U2 x r U2 r U2 r' U2 l U2 r' U2 r U2 r' U2 r' </span>
+                </li>
+                <li>
+                  Flip top side center<br />
+                  <span class="rubik_code">2R' U2 2L F2 2L' F2 2R2 U2 2R U2 F2 2R2 F2</span>
+                </li>
+              </ul>
         </li>
         <li>
-            Switch top side by side centers<br />
-            PLL Parity ► <pre>2R2 U2 2R2 u2 2R2 u2</pre>
+          <a href="https://www.speedcube.com.au/blogs/speedcubing-solutions/4x4-corner-swap-parity">PLL Parity</a>
+          <ul>
+            <li>
+              Switch top side by side centers<br />
+              <span class="rubik_code">2R2 U2 2R2 u2 2R2 u2</span>
+            </li>
+            <li>
+                Adiacent corner swap<br />
+                <span class="rubik_code">R U R' U' R' F R2 U' R' U' R U R' F'</span>
+            </li>
+            <li>
+              Diagonal corner swap<br />
+              <span class="rubik_code">F R U' R' U' R U R' F' R U R' U' R' F R F'</span>
+          </li>
+          <li>
+            Switch top adiacent centers<br />
+            <span class="rubik_code">R' U R U' - 2R U2 2R u2 2R 2U - U R' U' R</span>
+          </li>
         </li>
     </ul>
 
@@ -36,8 +67,6 @@
         <li>
             2R - turn the second right layer (internal right layer)
         </li>
-        
     </ul>
-    
   </body>
 </html>
