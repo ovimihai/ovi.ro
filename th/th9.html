@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>TH 9</title>
+    <style>
+      div {
+        text-align: center;
+      }
+    </style>
+    <script type="text/javascript">
+      function checkPass() {
+          if (document.getElementById("pass").value.toLowerCase() == "e4d4") {
+            alert("The next clue is: Fotbal 2022");
+          } else {
+            alert("The password is incorrect!")
+          }
+      }
+        document.addEventListener('DOMContentLoaded', function () {
+
+        }, false);
+    </script>
+  </head>
+  <body>
+    <div id="form">
+        Password:<br />
+        <input type="text" id="pass"/><br/>
+        <button type="button" onclick="checkPass()">Check</button>
+    </div>
+  </body>
+</html>
