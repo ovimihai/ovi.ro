@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+{% include head.html %}
+</head>
+<body class="{{ page.body_class | default: 'page' }}">
+<section id="wraper">
+{% if page.home %}<section id="main">{% endif %}
+{% include header.html %}
+{{ content }}
+{% if page.home %}</section>{% endif %}
+</section>
+{% include footer.html %}
+</body>
+</html>

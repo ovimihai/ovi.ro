@@ -1,0 +1,37 @@
+<aside class="dh4">
+ <section class="sidebar">
+<section class="jarakgrid">
+
+	<h3>Recent Posts</h3>
+	<ul>
+	{% for post in site.posts limit:5 %}
+		<li><a href="{{ post.url }}"{% if post.url == page.url %} aria-current="page"{% endif %}>{{ post.title }}</a></li>
+	{% endfor %}
+	</ul>
+
+	<div class="bersih"></div>
+<h3>Categories</h3>
+		<ul>
+	<li class="cat-item"><a href="/category/cheatsheets/" title="Cheatsheets to help you find fast the answers you are looking for without searching for everything, every tipe on google.
+You can still print some stuff!">CheatSheets</a></li>
+	<li class="cat-item"><a href="/category/elearning/" title="Articles about online resources, coupons and more">eLearning</a></li>
+	<li class="cat-item"><a href="/category/issues/" title="A section which group the most anoying issues in web programming and some full and partial solutions there.">Issues</a></li>
+	<li class="cat-item"><a href="/category/issues/javascript-issues/" title="A list of some solutions to Javascript Issues that I encountered.">JavaScript Issues</a></li>
+	<li class="cat-item"><a href="/category/jobs/">jobs</a></li>
+	<li class="cat-item"><a href="/category/mongodb/m101js/" title="Mongo University courses review">M101JS</a></li>
+	<li class="cat-item"><a href="/category/mongodb/" title="Articles related to the most proeminent NoSQL database at the moment. Basics, trainings and more advanced subjects about MongoDB.">MongoDB</a></li>
+	<li class="cat-item"><a href="/category/php/zce-training/php-basics/operators/" title="PHP Operators without whom you can&#039;t speak this language.">Operators</a></li>
+	<li class="cat-item"><a href="/category/php/" title="PHP related articles. A small ZCE resource archive based on the exam topics. Common solutions to your PHP problems">PHP</a></li>
+	<li class="cat-item"><a href="/category/php/zce-training/php-basics/" title="Basic topics for the PHP ZCE training. You&#039;ll need to know this even in your dreams.">PHP Basics</a></li>
+	<li class="cat-item"><a href="/category/python/">Python</a></li>
+	<li class="cat-item"><a href="/category/php/sadness/" title="A little bit of PHP sadness">Sadness</a></li>
+	<li class="cat-item"><a href="/category/php/zce-training/security/" title="How secure can PHP be. Common attacks types and their solutions, data filtering, output escaping, ACL and Auth.">Security</a></li>
+	<li class="cat-item"><a href="/category/snippets/" title="Snippets of usefull code">Snippets</a></li>
+	<li class="cat-item"><a href="/category/php/zce-training/strings-patterns/" title="Strings processing and the Mighty RegExp are the main subject in this category.">Strings &amp; Patterns</a></li>
+	<li class="cat-item"><a href="/category/php/zce-training/" title="Zend Certification Exam resource pack based on the topics listed on the official website. Most of the subjects will be reached here.">ZCE Training</a></li>
+		</ul>
+
+		<div class="bersih"></div>
+</section>
+</section>
+ </aside>

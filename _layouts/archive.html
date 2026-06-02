@@ -1,0 +1,23 @@
+---
+layout: default
+body_class: archive
+---
+{% if page.category %}{% assign items = site.categories[page.category] %}{% else %}{% assign items = site.tags[page.tag] %}{% endif %}
+<section class="dhoma">
+ <section class="dh8 article">
+  <section class="jarakgrid">
+	<h1 class="post-title"><span class="entry-title">{{ page.heading | default: page.title }}</span></h1>
+	<div class="post-meta"></div>
+{% for post in items %}
+        <article class="homepage post type-post status-publish format-standard hentry">
+       <h2><a href="{{ post.url }}" title="Permalink to {{ post.title | escape }}" rel="bookmark">{{ post.title }}</a></h2>
+       {% assign words = post.content | strip_html | strip_newlines | number_of_words %}
+       <p>{{ post.content | strip_html | strip_newlines | truncatewords: 45, " &hellip;" }}{% if words > 45 %} <a class="more" href="{{ post.url }}">Read more &raquo;</a>{% endif %}</p>
+     </article>
+{% else %}
+	<p>No posts in this section yet.</p>
+{% endfor %}
+  </section>
+ </section>
+{% include sidebar.html %}
+</section>

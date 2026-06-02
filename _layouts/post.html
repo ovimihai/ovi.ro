@@ -1,0 +1,43 @@
+---
+layout: default
+body_class: post-template-default single single-post single-format-standard
+---
+<section class="post type-post status-publish format-standard hentry">
+<section class="dhoma">
+ <section class="dh8 article">
+  <section class="jarakgrid">
+	<article>
+	 <div class="jarakgrid">
+	   <h1 class="post-title"><a href="{{ page.url }}" title="Permalink to {{ page.title | escape }}" rel="bookmark"><span class="entry-title">{{ page.title }}</span></a></h1>
+	  <div class="post-meta"></div>
+{{ content }}
+	  <div class="kosong"></div>
+	 <div class="post-meta">{% if page.categories.size > 0 %}Category : {% for cat in page.categories %}<a href="{{ site.category_links[cat] }}" rel="category tag">{{ cat }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}{% if page.tags.size > 0 %} | Tags : {% for tag in page.tags %}<a href="/tag/{{ tag | slugify }}/" rel="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</div>
+	 </div>
+	</article>
+  </section>
+ </section>
+{% include sidebar.html %}
+</section>
+<section class="dhoma navsingle">
+ <section class="dh12">
+  <nav class="nav-single">{% if page.previous %}<a href="{{ page.previous.url }}" rel="prev"><span class="prev-post">Prev | {{ page.previous.title }}</span></a>{% endif %}{% if page.next %}<a href="{{ page.next.url }}" rel="next"><span class="next-post">{{ page.next.title }} | Next</span></a>{% endif %}</nav> </section>
+</section>
+
+<div class="bersih"></div>
+<footer class="footer-single">
+<section class="dhoma navigasi">
+ <section class="dh8">
+   <nav id="breadcrumb"><a href="/">Home</a>{% for cat in page.categories %} <span>&raquo;</span> <a href="{{ site.category_links[cat] }}">{{ cat }}</a>{% endfor %} <span>&raquo;</span> <span class="crumb"><a>{{ page.title }}</a></span></nav>
+ </section>
+</section>
+<section class="dhoma infoadmin">
+ <section class="dh12 author-info vcard">
+  <img alt="" src="https://secure.gravatar.com/avatar/2839f5b0c33097fd33c3e722a846b2e7?s=80&#038;d=mm&#038;r=g" class="avatar avatar-80 photo" height="80" width="80" loading="lazy">   <h5><span class="fn">Author: <a href="/about/" title="Posts by Ovidiu Anicai" rel="author">Ovidiu Anicai</a></span></h5>
+   <p></p>
+ </section>
+</section>
+<section class="dhoma navigasi">
+ </section>
+</footer>
+</section>

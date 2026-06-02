@@ -1,0 +1,23 @@
+---
+layout: default
+home: true
+stylesheet: style-home.css
+body_class: home blog
+---
+<section class="dhoma">
+ <section class="dh8 article">
+  <section class="jarakgrid">
+{% for post in paginator.posts %}
+        <article class="homepage post type-post status-publish format-standard hentry">
+       <h2><a href="{{ post.url }}" title="Permalink to {{ post.title | escape }}" rel="bookmark">{{ post.title }}</a></h2>
+       {% assign words = post.content | strip_html | strip_newlines | number_of_words %}
+       <p>{{ post.content | strip_html | strip_newlines | truncatewords: 45, " &hellip;" }}{% if words > 45 %} <a class="more" href="{{ post.url }}">Read more &raquo;</a>{% endif %}</p>
+     </article>
+{% endfor %}
+      <nav id="pagenavi"><span class="pages">Page : {{ paginator.page }} - {{ paginator.total_pages }} </span>
+{% for n in (1..paginator.total_pages) %}{% if n == paginator.page %} <span class="page-numbers current">{{ n }}</span>{% elsif n == 1 %} <a class="page-numbers" href="/">1</a>{% else %} <a class="page-numbers" href="/page/{{ n }}/" title="Page {{ n }}">{{ n }}</a>{% endif %}{% endfor %}
+      </nav>
+  </section>
+ </section>
+{% include sidebar.html %}
+</section>

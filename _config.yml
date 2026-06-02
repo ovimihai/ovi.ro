@@ -1,0 +1,45 @@
+title: ovi.ro
+description: ovi.ro
+url: "https://ovi.ro"
+
+# Build
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Homepage pagination (matches the original /page/2/, /page/3/)
+paginate: 10
+paginate_path: "/page/:num/"
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+
+feed:
+  path: /feed/index.xml
+
+# Ignore build/source helpers (assets/ is published by default)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .sass-cache
+
+# Category name -> archive URL (mirrors the original WordPress hierarchy).
+# Used by _includes/sidebar.html and the category archive pages.
+category_links:
+  CheatSheets: /category/cheatsheets/
+  eLearning: /category/elearning/
+  Issues: /category/issues/
+  "JavaScript Issues": /category/issues/javascript-issues/
+  jobs: /category/jobs/
+  M101JS: /category/mongodb/m101js/
+  MongoDB: /category/mongodb/
+  Operators: /category/php/zce-training/php-basics/operators/
+  PHP: /category/php/
+  "PHP Basics": /category/php/zce-training/php-basics/
+  Python: /category/python/
+  Sadness: /category/php/sadness/
+  Security: /category/php/zce-training/security/
+  Snippets: /category/snippets/
+  "Strings & Patterns": /category/php/zce-training/strings-patterns/
+  ZCE Training: /category/php/zce-training/
