@@ -645,6 +645,11 @@ html, body {
 	border-radius:2px;
 	transition:transform .25s ease, opacity .25s ease;
 	}
+/* Visible focus ring for keyboard users (the checkbox itself is off-screen) */
+.menu-toggle:focus ~ .menu-burger{
+	outline:2px solid #00657E;
+	outline-offset:-2px;
+	}
 /* Animate bars into an X when the menu is open */
 .menu-toggle:checked ~ .menu-burger span:nth-child(1){
 	transform:translateY(7px) rotate(45deg);
