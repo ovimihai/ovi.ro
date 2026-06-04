@@ -556,6 +556,17 @@ ul.nav ul li ul li:hover ul{
 ul.nav li * a:hover {
 	background: rgba(0, 0, 0, .5);
 	}
+/* Mobile burger toggle (hidden on desktop, revealed in the media query below) */
+.menu-toggle{
+	position:absolute;
+	left:-9999px;
+	width:1px;
+	height:1px;
+	opacity:0;
+	}
+.menu-burger{
+	display:none;
+	}
 /* PageNavi
 ------------------------------------------------------------- */
 #pagenavi{
@@ -1406,57 +1417,97 @@ html, body {
 	width:97.91666666666666%;
 	margin:0 1.0416666666666665%
 	}
+.jarakgrid{
+	padding:10px 12px;
+	}
+
+/* --- Burger menu --------------------------------------------------- */
 #navwrap{
-padding:5px 0;
-	}
-ul.nav{margin-left:10px}
-ul.nav li{
-	clear:both;
-	border-right:none;
-	box-shadow:none;
-	}
-ul.nav li a,
-.nav li a,ul.nav ul li a{
-	line-height:1.6em;
+	position:relative;
 	padding:0;
 	}
-ul.nav ul {
-	position:relative;
+/* Show the burger button, pushed to the right of the nav bar */
+.menu-burger{
+	display:block;
+	float:right;
+	width:48px;
+	height:42px;
+	padding:11px 12px;
+	box-sizing:border-box;
+	cursor:pointer;
+	}
+.menu-burger span{
+	display:block;
+	width:24px;
+	height:3px;
+	margin:4px 0;
+	background:#bbb;
+	border-radius:2px;
+	transition:transform .25s ease, opacity .25s ease;
+	}
+/* Animate bars into an X when the menu is open */
+.menu-toggle:checked ~ .menu-burger span:nth-child(1){
+	transform:translateY(7px) rotate(45deg);
+	}
+.menu-toggle:checked ~ .menu-burger span:nth-child(2){
+	opacity:0;
+	}
+.menu-toggle:checked ~ .menu-burger span:nth-child(3){
+	transform:translateY(-7px) rotate(-45deg);
+	}
+/* Collapse the menu by default; reveal it when the toggle is checked */
+ul.nav{
+	display:none;
+	clear:both;
+	float:none;
+	width:100%;
+	margin:0;
+	}
+.menu-toggle:checked ~ ul.nav{
+	display:block;
+	}
+ul.nav li{
+	clear:both;
+	float:none;
+	border-right:none;
+	box-shadow:none;
+	border-top:1px solid #333;
+	}
+ul.nav li a,
+.nav li a,
+ul.nav ul li a{
+	display:block;
+	line-height:1.4em;
+	padding:12px 16px;
+	font-size:1em;
+	}
+/* Submenus: always expanded and indented inside the open menu */
+ul.nav ul,
+ul.nav li:hover ul ul,
+ul.nav ul li:hover ul ul{
+	position:static;
+	display:block;
 	z-index:0;
-	display:inline;
 	background:none;
 	border:none;
 	}
-ul.nav li * a:hover {
-	background: none;
+ul.nav ul ul{
+	left:0;
 	}
-.nav ul li{
-	padding-left:10px
+ul.nav ul li a{
+	padding-left:32px;
+	color:#777;
+	}
+ul.nav ul ul li a{
+	padding-left:48px;
+	}
+ul.nav li * a:hover {
+	background:rgba(0,0,0,.4);
 	}
 .next-post,
 .prev-post {
 	padding:3px 2em;
 	}
-	
-ul.nav ul ul{
-	left: 0;
-}
-
-/* Hide all the navs (submenus) */
-ul.nav ul,
-ul.nav li:hover ul ul,
-ul.nav ul li:hover ul ul{
-	display:block;
-	background:#222;
-	border:0px solid #000
-	}
-/* Display the submenus only when li are hovered */
-ul.nav li:hover ul,
-ul.nav ul li:hover ul ,
-ul.nav ul li ul li:hover ul{
-	display:block;
-	}
-	
 }
 
 
