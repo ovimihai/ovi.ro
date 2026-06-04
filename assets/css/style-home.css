@@ -234,12 +234,15 @@ h6 {
 	color:rgba(0, 0, 0, .8);
 	text-shadow: 0 1px 1px rgba(255, 255, 255, .3), 0 0 0 #000
 	}
-.site-info h3{
-	font-size:12px;
-	color:#777
+.site-info h1{
+	line-height:1em;
+	margin:0;
 	}
-.site-info{
-	float:left;
+/* Desktop: title and menu sit inline on one row, vertically centered */
+#navwrap{
+	display:flex;
+	align-items:center;
+	flex-wrap:wrap;
 	}
 ul.nav {
 	list-style:none;
@@ -623,8 +626,18 @@ html, body {
 
 /* --- Burger menu --------------------------------------------------- */
 #navwrap{
+	display:block;
 	position:relative;
 	padding:0;
+	}
+#navwrap:after{
+	content:"";
+	display:table;
+	clear:both;
+	}
+/* Keep the title left and burger right on the same line */
+.site-info{
+	float:left;
 	}
 /* Show the burger button, pushed to the right of the nav bar */
 .menu-burger{
